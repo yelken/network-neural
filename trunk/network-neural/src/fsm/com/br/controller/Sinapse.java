@@ -37,8 +37,17 @@ public class Sinapse {
 
 		Iterator<Entry<Integer[], Integer[]>> iterator = set.iterator();
 
+		Vector<Entry<Integer[], Integer[]>> aux = new Vector<Map.Entry<Integer[], Integer[]>>();
+
 		while (iterator.hasNext()) {
-			Map.Entry<Integer[], Integer[]> entrada = iterator.next();
+			aux.add(iterator.next());
+		}
+
+		Boolean repetir = false;
+
+		for (int y = 0; y < aux.size(); y++) {
+			Map.Entry<Integer[], Integer[]> entrada = aux.get(y);
+
 			Integer contador = 0;
 
 			for (int i = 0; i < entrada.getValue().length; i++) {
@@ -53,12 +62,14 @@ public class Sinapse {
 					neuronio0.setEntradas(entradas);
 					neuronio0.setSaidaEncontrada(Utils.calcularTeta(Utils
 							.calcularResultado(neuronio0)));
-					
+
+					resultado.add(neuronio0.getSaidaEncontrada());
+
 					contador++;
 					break;
 				}
 			}
-			
+
 			for (int i = 0; i < entrada.getValue().length; i++) {
 				if (i == contador) {
 					neuronio1.setSaidaDesejada(entrada.getValue()[i]);
@@ -71,12 +82,14 @@ public class Sinapse {
 					neuronio1.setEntradas(entradas);
 					neuronio1.setSaidaEncontrada(Utils.calcularTeta(Utils
 							.calcularResultado(neuronio1)));
-					
+
+					resultado.add(neuronio1.getSaidaEncontrada());
+
 					contador++;
 					break;
 				}
 			}
-			
+
 			for (int i = 0; i < entrada.getValue().length; i++) {
 				if (i == contador) {
 					neuronio2.setSaidaDesejada(entrada.getValue()[i]);
@@ -89,12 +102,14 @@ public class Sinapse {
 					neuronio2.setEntradas(entradas);
 					neuronio2.setSaidaEncontrada(Utils.calcularTeta(Utils
 							.calcularResultado(neuronio2)));
-					
+
+					resultado.add(neuronio2.getSaidaEncontrada());
+
 					contador++;
 					break;
 				}
 			}
-			
+
 			for (int i = 0; i < entrada.getValue().length; i++) {
 				if (i == contador) {
 					neuronio3.setSaidaDesejada(entrada.getValue()[i]);
@@ -107,13 +122,48 @@ public class Sinapse {
 					neuronio3.setEntradas(entradas);
 					neuronio3.setSaidaEncontrada(Utils.calcularTeta(Utils
 							.calcularResultado(neuronio3)));
-					
+
+					resultado.add(neuronio3.getSaidaEncontrada());
+
 					contador++;
 					break;
 				}
-			}		
+			}
+
+			Vector<Integer> rs = new Vector<Integer>();
+
+			for (int i = 0; i < entrada.getValue().length; i++) {
+				rs.add(entrada.getValue()[i]);
+			}
+
+			Vector<Integer> inpt = new Vector<Integer>();
+
+			for (int i = 0; i < entrada.getKey().length; i++) {
+				inpt.add(entrada.getKey()[i]);
+			}
+
+			if (!rs.toString().equals(resultado.toString())) {
+				Utils.calcularNovosPesos(neuronio0);
+				Utils.calcularNovosPesos(neuronio1);
+				Utils.calcularNovosPesos(neuronio2);
+				Utils.calcularNovosPesos(neuronio3);
+				repetir = true;
+			}
+
+			if (repetir && (y + 1 == aux.size())) {
+				y = 0;
+				repetir = false;
+			}
+
+			System.out.println("Entrada: " + inpt.toString());
+			System.out.println("Saida desejada: " + rs.toString());
+			System.out.println("Resultado: " + resultado.toString());
+			System.out.println("\n");
+			resultado.clear();
 
 		}
+
+		System.out.println("Rede neural treinada");
 
 	}
 
