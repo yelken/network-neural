@@ -9,7 +9,9 @@ public class Neuronio {
 	private Integer saidaEncontrada;
 
 	public Neuronio() {
-		for (int i = 0; i < 20; i++) {
+		this.pesos = new Vector<Integer>();
+
+		for (int i = 0; i < 21; i++) {
 			this.pesos.add(0);
 		}
 	}
