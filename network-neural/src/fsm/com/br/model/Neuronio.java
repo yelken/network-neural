@@ -11,7 +11,7 @@ public class Neuronio {
 	public Neuronio() {
 		this.pesos = new Vector<Integer>();
 
-		for (int i = 0; i < 21; i++) {
+		for (int i = 0; i < Utils.entradas; i++) {
 			this.pesos.add(0);
 		}
 	}
