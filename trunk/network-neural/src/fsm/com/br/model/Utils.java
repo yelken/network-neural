@@ -4,6 +4,8 @@ public class Utils {
 	public static final byte taxaAprendizagem = 1;
 
 	public static final byte bia = 1;
+	
+	public static final Integer entradas = 20 + bia;
 
 	public static final Integer[] A = { bia, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1,
 			1, 1, 0, 0, 1, 1, 0, 0, 1 };
@@ -62,7 +64,6 @@ public class Utils {
 			Integer pesoNovo = neuronio.getPesos().get(i)
 					+ (taxaAprendizagem * calcularErro(neuronio) * neuronio
 							.getEntradas().get(i));
-			System.out.println("W" + i + "n" + "=" + pesoNovo);
 			neuronio.getPesos().set(i, pesoNovo);
 		}
 

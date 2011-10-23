@@ -12,7 +12,7 @@ import fsm.com.br.model.Utils;
 
 public class Sinapse {
 
-	public void treinarRede() {
+	public Vector<Neuronio> treinarRede() {
 		HashMap<Integer[], Integer[]> resultadosPossiveis = new HashMap<Integer[], Integer[]>();
 
 		resultadosPossiveis.put(Utils.A, Utils.sdA);
@@ -44,6 +44,7 @@ public class Sinapse {
 		}
 
 		Boolean repetir = false;
+		Integer iteracoes = 0;
 
 		for (int y = 0; y < aux.size(); y++) {
 			Map.Entry<Integer[], Integer[]> entrada = aux.get(y);
@@ -161,10 +162,37 @@ public class Sinapse {
 			System.out.println("\n");
 			resultado.clear();
 
+			iteracoes++;
+
 		}
 
 		System.out.println("Rede neural treinada");
-
+		System.out.println("Iterações: " + iteracoes);
+		
+		Vector<Neuronio> retorno = new Vector<Neuronio>();
+		retorno.add(neuronio0);
+		retorno.add(neuronio1);
+		retorno.add(neuronio2);
+		retorno.add(neuronio3);
+		
+		return retorno;
 	}
 
+	public String calcularResultado(Integer[] entrada) {
+		HashMap<Integer[], String> resultados = new HashMap<Integer[], String>();
+		
+		resultados.put(Utils.sdA,"A");
+		resultados.put(Utils.sdS,"S");
+		resultados.put(Utils.sdD,"D");
+		resultados.put(Utils.sdF,"F");
+		resultados.put(Utils.sdG,"G");
+		resultados.put(Utils.sdH,"H");
+		resultados.put(Utils.sdJ,"J");
+		resultados.put(Utils.sdK,"K");
+		resultados.put(Utils.sdL,"L");
+		resultados.put(Utils.sdP,"P");
+		
+		
+		return null;
+	}
 }
