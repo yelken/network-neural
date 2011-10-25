@@ -42,7 +42,8 @@ public class Sinapse {
 		Vector<Integer> resultadoIteracao = new Vector<Integer>();
 		Boolean repetir = false;
 		Integer iteracoes = 0;
-
+		
+		//TESTE
 		for (int y = 0; y < resultadosEsperados.size(); y++) {
 			Map.Entry<Integer[], Integer[]> resultadoPossivel = resultadosEsperados
 					.get(y);
