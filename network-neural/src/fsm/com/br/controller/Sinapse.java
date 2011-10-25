@@ -180,7 +180,6 @@ public class Sinapse {
 			Vector<Neuronio> neuronios) {
 		
 		
-		// Perinaldo 2011
 		HashMap<Integer[], String> resultadosPossiveis = new HashMap<Integer[], String>();
 
 		resultadosPossiveis.put(Utils.sdA, "A");
