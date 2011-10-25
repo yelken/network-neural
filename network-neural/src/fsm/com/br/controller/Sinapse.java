@@ -165,7 +165,7 @@ public class Sinapse {
 		}
 
 		System.out.println("Rede neural treinada");
-		System.out.println("Iterações: " + iteracoes);
+		System.out.println("IteraÔøΩ‚Ä∫es: " + iteracoes);
 
 		Vector<Neuronio> retorno = new Vector<Neuronio>();
 		retorno.add(neuronio0);
@@ -178,7 +178,9 @@ public class Sinapse {
 
 	public String calcularResultado(Integer[] entrada,
 			Vector<Neuronio> neuronios) {
-
+		
+		
+		// Perinaldo 2011
 		HashMap<Integer[], String> resultadosPossiveis = new HashMap<Integer[], String>();
 
 		resultadosPossiveis.put(Utils.sdA, "A");
