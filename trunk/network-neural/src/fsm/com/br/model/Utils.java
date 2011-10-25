@@ -4,7 +4,7 @@ public class Utils {
 	public static final byte taxaAprendizagem = 1;
 
 	public static final byte bia = 1;
-	
+
 	public static final Integer entradas = 20 + bia;
 
 	public static final Integer[] A = { bia, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1,
@@ -46,6 +46,9 @@ public class Utils {
 	public static final Integer[] P = { bia, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1,
 			1, 1, 0, 0, 0, 1, 0, 0, 0 };
 	public static final Integer[] sdP = { 1, 0, 0, 1 };
+	
+	
+	
 
 	public static Integer calcularTeta(Integer v) {
 		if (v >= 0) {
