@@ -43,7 +43,6 @@ public class Sinapse {
 		Boolean repetir = false;
 		Integer iteracoes = 0;
 		
-		//TESTE
 		for (int y = 0; y < resultadosEsperados.size(); y++) {
 			Map.Entry<Integer[], Integer[]> resultadoPossivel = resultadosEsperados
 					.get(y);
