@@ -42,8 +42,10 @@ public class Sinapse {
 		Vector<Integer> resultadoIteracao = new Vector<Integer>();
 		Boolean repetir = false;
 		Integer iteracoes = 0;
-		
+
 		for (int y = 0; y < resultadosEsperados.size(); y++) {
+			System.out.println("Ciclo: " + iteracoes);
+			
 			Map.Entry<Integer[], Integer[]> resultadoPossivel = resultadosEsperados
 					.get(y);
 
@@ -51,13 +53,15 @@ public class Sinapse {
 
 			for (int i = 0; i < resultadoPossivel.getValue().length; i++) {
 				if (i == contador) {
+					System.out.println("Neuronio 0");
 					neuronio0.setSaidaDesejada(resultadoPossivel.getValue()[i]);
+					
 					Vector<Integer> entradas = new Vector<Integer>();
 
 					for (int x = 0; x < resultadoPossivel.getKey().length; x++) {
 						entradas.add(resultadoPossivel.getKey()[x]);
 					}
-
+					
 					neuronio0.setEntradas(entradas);
 					neuronio0.setSaidaEncontrada(Utils.calcularTeta(Utils
 							.calcularResultado(neuronio0)));
@@ -71,6 +75,7 @@ public class Sinapse {
 
 			for (int i = 0; i < resultadoPossivel.getValue().length; i++) {
 				if (i == contador) {
+					System.out.println("Neuronio 1");
 					neuronio1.setSaidaDesejada(resultadoPossivel.getValue()[i]);
 					Vector<Integer> entradas = new Vector<Integer>();
 
@@ -91,6 +96,7 @@ public class Sinapse {
 
 			for (int i = 0; i < resultadoPossivel.getValue().length; i++) {
 				if (i == contador) {
+					System.out.println("Neuronio 2");
 					neuronio2.setSaidaDesejada(resultadoPossivel.getValue()[i]);
 					Vector<Integer> entradas = new Vector<Integer>();
 
@@ -111,6 +117,7 @@ public class Sinapse {
 
 			for (int i = 0; i < resultadoPossivel.getValue().length; i++) {
 				if (i == contador) {
+					System.out.println("Neuronio 3");
 					neuronio3.setSaidaDesejada(resultadoPossivel.getValue()[i]);
 					Vector<Integer> entradas = new Vector<Integer>();
 
@@ -165,8 +172,17 @@ public class Sinapse {
 		}
 
 		System.out.println("Rede neural treinada");
-		System.out.println("IteraÔøΩ‚Ä∫es: " + iteracoes);
-
+		System.out.println("Iterações: " + iteracoes);
+		
+		
+		
+		
+		Vector<Integer> clear = new Vector<Integer>();
+		neuronio0.setEntradas(clear);
+		neuronio1.setEntradas(clear);
+		neuronio2.setEntradas(clear);
+		neuronio3.setEntradas(clear);
+		
 		Vector<Neuronio> retorno = new Vector<Neuronio>();
 		retorno.add(neuronio0);
 		retorno.add(neuronio1);
@@ -178,24 +194,7 @@ public class Sinapse {
 
 	public String calcularResultado(Integer[] entrada,
 			Vector<Neuronio> neuronios) {
-		
-		
-		HashMap<Integer[], String> resultadosPossiveis = new HashMap<Integer[], String>();
-
-		resultadosPossiveis.put(Utils.sdA, "A");
-		resultadosPossiveis.put(Utils.sdS, "S");
-		resultadosPossiveis.put(Utils.sdD, "D");
-		resultadosPossiveis.put(Utils.sdF, "F");
-		resultadosPossiveis.put(Utils.sdG, "G");
-		resultadosPossiveis.put(Utils.sdH, "H");
-		resultadosPossiveis.put(Utils.sdJ, "J");
-		resultadosPossiveis.put(Utils.sdK, "K");
-		resultadosPossiveis.put(Utils.sdL, "L");
-		resultadosPossiveis.put(Utils.sdP, "P");
-
 		String resultado = "";
-
-		Integer[] rIterator = new Integer[4];
 
 		for (int i = 0; i < neuronios.size(); i++) {
 
@@ -207,13 +206,10 @@ public class Sinapse {
 
 			neuronios.get(i).setEntradas(inputs);
 
-			rIterator[i] = Utils.calcularTeta(Utils.calcularResultado(neuronios
-					.get(i)));
-
-			resultado = resultado + rIterator[i];
+			resultado = resultado
+					+ Utils.calcularTeta(Utils.calcularResultado(neuronios
+							.get(i)));
 		}
-
-		System.out.println(resultadosPossiveis.get(rIterator));
 
 		return resultado;
 	}

@@ -46,9 +46,6 @@ public class Utils {
 	public static final Integer[] P = { bia, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1,
 			1, 1, 0, 0, 0, 1, 0, 0, 0 };
 	public static final Integer[] sdP = { 1, 0, 0, 1 };
-	
-	
-	
 
 	public static Integer calcularTeta(Integer v) {
 		if (v >= 0) {
@@ -59,15 +56,34 @@ public class Utils {
 	}
 
 	public static Integer calcularErro(Neuronio neuronio) {
-		return neuronio.getSaidaDesejada() - neuronio.getSaidaEncontrada();
+		Integer resultado = neuronio.getSaidaDesejada()
+				- neuronio.getSaidaEncontrada();
+		System.err.println("Erro");
+		System.out.println("Erro = " + neuronio.getSaidaDesejada() + " - "
+				+ neuronio.getSaidaEncontrada() + " > " + resultado);
+		return resultado;
 	}
 
 	public static Neuronio calcularNovosPesos(Neuronio neuronio) {
+		System.out.println("Calculo dos novos pesos");
+		
+		Integer erro = calcularErro(neuronio);
+		
 		for (int i = 0; i < neuronio.getEntradas().size(); i++) {
+			
+			
 			Integer pesoNovo = neuronio.getPesos().get(i)
-					+ (taxaAprendizagem * calcularErro(neuronio) * neuronio
+					+ (taxaAprendizagem * erro * neuronio
 							.getEntradas().get(i));
 			neuronio.getPesos().set(i, pesoNovo);
+			
+			String expressaoNumerica = "W" + i + "n = "
+			+ neuronio.getPesos().get(i) + "+" + "(" + taxaAprendizagem
+			+ "*" + erro + "*"
+			+ neuronio.getEntradas().get(i) + ")" + " > " + pesoNovo;
+			
+			
+			System.out.println(expressaoNumerica);
 		}
 
 		return neuronio;
@@ -76,10 +92,20 @@ public class Utils {
 	public static Integer calcularResultado(Neuronio neuronio) {
 		Integer resultado = 0;
 
+		String expressaoNumerica = "";
+
 		for (int i = 0; i < neuronio.getEntradas().size(); i++) {
-			resultado = (neuronio.getEntradas().get(i) * neuronio.getPesos()
+			resultado = (neuronio.getPesos().get(i) * neuronio.getEntradas()
 					.get(i)) + resultado;
+			expressaoNumerica = expressaoNumerica + "+" + "("
+					+ neuronio.getPesos().get(i) + "*"
+					+ neuronio.getEntradas().get(i) + ")";
 		}
+
+		String v = "v = ";
+
+		System.out.println(v
+				+ expressaoNumerica.substring(1, expressaoNumerica.length()));
 
 		return resultado;
 	}
