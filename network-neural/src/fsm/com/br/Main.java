@@ -1,23 +1,35 @@
 package fsm.com.br;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.Vector;
 
 import fsm.com.br.controller.Sinapse;
 import fsm.com.br.model.Neuronio;
-import fsm.com.br.model.Utils;
 
 public class Main {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 		Sinapse sinapse = new Sinapse();
+
+		Vector<Neuronio> aux = sinapse.treinarRede();
 		
-		Integer[] teste = {Utils.bia, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-			0, 0, 0, 0, 1, 1, 1, 1, 1 };
+		BufferedReader buf = new BufferedReader(new InputStreamReader(System.in));  
+		String valor = buf.readLine(); 
 		
-		Vector<Neuronio> aux =  sinapse.treinarRede();
-		
-		
-		System.out.println(sinapse.calcularResultado(teste, aux));
-		
+		char[] arrayValores = valor.toCharArray();  
+        Integer[] testeEntrada = new Integer[arrayValores.length];  
+  
+        for (int i = 0; i < arrayValores.length; i++)   
+        {  
+            testeEntrada[i] = Integer  
+                    .parseInt(String.valueOf(arrayValores[i]));  
+        }  
+
+		System.out.println(sinapse.calcularResultado(testeEntrada, aux));
+		//System.out.println(sinapse.calcularResultado(Utils.P, aux));
+		//System.out.println("\n");
+		//System.out.println(sinapse.calcularResultado(Utils.A, aux));
 	}
 }
