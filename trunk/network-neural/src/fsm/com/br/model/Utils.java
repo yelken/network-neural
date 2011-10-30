@@ -60,7 +60,7 @@ public class Utils {
 				- neuronio.getSaidaEncontrada();
 		System.err.println("Erro");
 		System.out.println("Erro = " + neuronio.getSaidaDesejada() + " - "
-				+ neuronio.getSaidaEncontrada() + " > " + resultado);
+				+ neuronio.getSaidaEncontrada() + " => " + resultado);
 		return resultado;
 	}
 
@@ -80,7 +80,7 @@ public class Utils {
 			String expressaoNumerica = "W" + i + "n = "
 			+ neuronio.getPesos().get(i) + "+" + "(" + taxaAprendizagem
 			+ "*" + erro + "*"
-			+ neuronio.getEntradas().get(i) + ")" + " > " + pesoNovo;
+			+ neuronio.getEntradas().get(i) + ")" + " => " + pesoNovo;
 			
 			
 			System.out.println(expressaoNumerica);
