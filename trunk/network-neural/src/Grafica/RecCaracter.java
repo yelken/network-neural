@@ -52,6 +52,7 @@ public class RecCaracter extends JFrame implements ActionListener{
 	private int cont = 1;
 	private Integer[] vetor = new Integer[21];
 	private char treinou = 0;
+	private int desenhou = 0;
 	
 	public RecCaracter(){
 		setTitle("RecCaracter - Programa de Reconhecimento de Caracteres - IA");
@@ -84,7 +85,7 @@ public class RecCaracter extends JFrame implements ActionListener{
 	                public void actionPerformed(ActionEvent e){
 	                    try {
 	                    	btn1.setBackground(Color.black); 
-	                    	
+	                    	desenhou += 1;
 						} catch (Exception e1) {
 							JOptionPane.showMessageDialog(null, e1.getMessage());
 						}
@@ -104,7 +105,7 @@ public class RecCaracter extends JFrame implements ActionListener{
 	                public void actionPerformed(ActionEvent e){
 	                    try {
 	                    	btn2.setBackground(Color.black); 
-	                    	
+	                    	desenhou += 1;
 						} catch (Exception e1) {
 							JOptionPane.showMessageDialog(null, e1.getMessage());
 						}
@@ -124,7 +125,7 @@ public class RecCaracter extends JFrame implements ActionListener{
 	                public void actionPerformed(ActionEvent e){
 	                    try {
 	                    	btn3.setBackground(Color.black); 
-	                    	
+	                    	desenhou += 1;
 						} catch (Exception e1) {
 							JOptionPane.showMessageDialog(null, e1.getMessage());
 						}
@@ -144,7 +145,7 @@ public class RecCaracter extends JFrame implements ActionListener{
 	                public void actionPerformed(ActionEvent e){
 	                    try {
 	                    	btn4.setBackground(Color.black); 
-	                    	
+	                    	desenhou += 1;
 						} catch (Exception e1) {
 							JOptionPane.showMessageDialog(null, e1.getMessage());
 						}
@@ -164,7 +165,7 @@ public class RecCaracter extends JFrame implements ActionListener{
 	                public void actionPerformed(ActionEvent e){
 	                    try {
 	                    	btn5.setBackground(Color.black); 
-	                    	
+	                    	desenhou += 1;
 						} catch (Exception e1) {
 							JOptionPane.showMessageDialog(null, e1.getMessage());
 						}
@@ -184,7 +185,7 @@ public class RecCaracter extends JFrame implements ActionListener{
 	                public void actionPerformed(ActionEvent e){
 	                    try {
 	                    	btn6.setBackground(Color.black); 
-	                    	
+	                    	desenhou += 1;
 						} catch (Exception e1) {
 							JOptionPane.showMessageDialog(null, e1.getMessage());
 						}
@@ -204,7 +205,7 @@ public class RecCaracter extends JFrame implements ActionListener{
 	                public void actionPerformed(ActionEvent e){
 	                    try {
 	                    	btn7.setBackground(Color.black); 
-	                    	
+	                    	desenhou += 1;
 						} catch (Exception e1) {
 							JOptionPane.showMessageDialog(null, e1.getMessage());
 						}
@@ -224,7 +225,7 @@ public class RecCaracter extends JFrame implements ActionListener{
 	                public void actionPerformed(ActionEvent e){
 	                    try {
 	                    	btn8.setBackground(Color.black); 
-	                    	
+	                    	desenhou += 1;
 						} catch (Exception e1) {
 							JOptionPane.showMessageDialog(null, e1.getMessage());
 						}
@@ -244,7 +245,7 @@ public class RecCaracter extends JFrame implements ActionListener{
 	                public void actionPerformed(ActionEvent e){
 	                    try {
 	                    	btn9.setBackground(Color.black); 
-	                    	
+	                    	desenhou += 1;
 						} catch (Exception e1) {
 							JOptionPane.showMessageDialog(null, e1.getMessage());
 						}
@@ -264,7 +265,7 @@ public class RecCaracter extends JFrame implements ActionListener{
 	                public void actionPerformed(ActionEvent e){
 	                    try {
 	                    	btn10.setBackground(Color.black); 
-	                    	
+	                    	desenhou += 1;
 						} catch (Exception e1) {
 							JOptionPane.showMessageDialog(null, e1.getMessage());
 						}
@@ -284,7 +285,7 @@ public class RecCaracter extends JFrame implements ActionListener{
 	                public void actionPerformed(ActionEvent e){
 	                    try {
 	                    	btn11.setBackground(Color.black); 
-	                    	
+	                    	desenhou += 1;
 						} catch (Exception e1) {
 							JOptionPane.showMessageDialog(null, e1.getMessage());
 						}
@@ -304,7 +305,7 @@ public class RecCaracter extends JFrame implements ActionListener{
 	                public void actionPerformed(ActionEvent e){
 	                    try {
 	                    	btn12.setBackground(Color.black); 
-	                    	
+	                    	desenhou += 1;
 						} catch (Exception e1) {
 							JOptionPane.showMessageDialog(null, e1.getMessage());
 						}
@@ -324,7 +325,7 @@ public class RecCaracter extends JFrame implements ActionListener{
 	                public void actionPerformed(ActionEvent e){
 	                    try {
 	                    	btn13.setBackground(Color.black); 
-	                    	
+	                    	desenhou += 1;
 						} catch (Exception e1) {
 							JOptionPane.showMessageDialog(null, e1.getMessage());
 						}
@@ -344,7 +345,7 @@ public class RecCaracter extends JFrame implements ActionListener{
 	                public void actionPerformed(ActionEvent e){
 	                    try {
 	                    	btn14.setBackground(Color.black); 
-	                    	
+	                    	desenhou += 1;
 						} catch (Exception e1) {
 							JOptionPane.showMessageDialog(null, e1.getMessage());
 						}
@@ -364,7 +365,7 @@ public class RecCaracter extends JFrame implements ActionListener{
 	                public void actionPerformed(ActionEvent e){
 	                    try {
 	                    	btn15.setBackground(Color.black); 
-	                    	
+	                    	desenhou += 1;
 						} catch (Exception e1) {
 							JOptionPane.showMessageDialog(null, e1.getMessage());
 						}
@@ -384,7 +385,7 @@ public class RecCaracter extends JFrame implements ActionListener{
 	                public void actionPerformed(ActionEvent e){
 	                    try {
 	                    	btn16.setBackground(Color.black); 
-	                    	
+	                    	desenhou += 1;
 						} catch (Exception e1) {
 							JOptionPane.showMessageDialog(null, e1.getMessage());
 						}
@@ -404,7 +405,7 @@ public class RecCaracter extends JFrame implements ActionListener{
 	                public void actionPerformed(ActionEvent e){
 	                    try {
 	                    	btn17.setBackground(Color.black); 
-	                    	
+	                    	desenhou += 1;
 						} catch (Exception e1) {
 							JOptionPane.showMessageDialog(null, e1.getMessage());
 						}
@@ -424,7 +425,7 @@ public class RecCaracter extends JFrame implements ActionListener{
 	                public void actionPerformed(ActionEvent e){
 	                    try {
 	                    	btn18.setBackground(Color.black); 
-	                    	
+	                    	desenhou += 1;
 						} catch (Exception e1) {
 							JOptionPane.showMessageDialog(null, e1.getMessage());
 						}
@@ -444,7 +445,7 @@ public class RecCaracter extends JFrame implements ActionListener{
 	                public void actionPerformed(ActionEvent e){
 	                    try {
 	                    	btn19.setBackground(Color.black); 
-	                    	
+	                    	desenhou += 1;
 						} catch (Exception e1) {
 							JOptionPane.showMessageDialog(null, e1.getMessage());
 						}
@@ -464,7 +465,7 @@ public class RecCaracter extends JFrame implements ActionListener{
 	                public void actionPerformed(ActionEvent e){
 	                    try {
 	                    	btn20.setBackground(Color.black); 
-	                    	
+	                    	desenhou += 1;
 						} catch (Exception e1) {
 							JOptionPane.showMessageDialog(null, e1.getMessage());
 						}
@@ -518,20 +519,25 @@ public class RecCaracter extends JFrame implements ActionListener{
 	                public void actionPerformed(ActionEvent e){
 	                    try {
 	                    	if(treinou != 0){
-		                    	vetor[0] = Utils.bia;
-		                    	for(int x = 0; x < ((JComponent)getContentPane()).getComponentCount();x++){
-		                    		String comp = ((JComponent)getContentPane()).getComponent(x).getClass().getName();
-		                    		if(comp.equals("javax.swing.JButton") && ((JComponent)getContentPane()).getComponent(x).getHeight() == 80){
-		                    			cor = ((JComponent)getContentPane()).getComponent(x).getBackground();
-		                    			if(cor == Color.black){
-		                    				vetor[cont] = 1;
-		                    			}else{
-		                    				vetor[cont] = 0;
-		                    			}
-		                    			cont++;
-		                    		}
-		                    		
-		                    	}
+	                    		if(desenhou > 0){
+			                    	vetor[0] = Utils.bia;
+			                    	for(int x = 0; x < ((JComponent)getContentPane()).getComponentCount();x++){
+			                    		String comp = ((JComponent)getContentPane()).getComponent(x).getClass().getName();
+			                    		if(comp.equals("javax.swing.JButton") && ((JComponent)getContentPane()).getComponent(x).getHeight() == 80){
+			                    			cor = ((JComponent)getContentPane()).getComponent(x).getBackground();
+			                    			if(cor == Color.black){
+			                    				vetor[cont] = 1;
+			                    			}else{
+			                    				vetor[cont] = 0;
+			                    			}
+			                    			cont++;
+			                    		}
+			                    		
+			                    	}
+	                    		}else{
+	                    			JOptionPane.showMessageDialog(null, "Ainda não foi desenhado nada! \n Por favor, desenhe algum caractere" +
+	                    					" antes de prosseguir com a validação!");
+	                    		}
 	                    	}else{
 	                    		JOptionPane.showMessageDialog(null, "Não há o que validar pois a rede ainda não foi treinada!\n" + 
 	                    	    "Por favor, treine a rede primeiro!");
@@ -557,6 +563,7 @@ public class RecCaracter extends JFrame implements ActionListener{
 	                    		String comp = ((JComponent)getContentPane()).getComponent(x).getClass().getName();
 	                    		if(comp.equals("javax.swing.JButton") && ((JComponent)getContentPane()).getComponent(x).getHeight() == 80){
 	                    			((JComponent)getContentPane()).getComponent(x).setBackground(Color.white);
+	                    			desenhou = 0;
 	                    		}
 	                    		
 	                    	}
