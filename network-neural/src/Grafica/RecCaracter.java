@@ -4,6 +4,9 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
+
+import fsm.com.br.model.Utils;
+
 import java.awt.Dimension;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
@@ -512,6 +515,7 @@ public class RecCaracter extends JFrame implements ActionListener{
 	            new ActionListener(){
 	                public void actionPerformed(ActionEvent e){
 	                    try {
+	                    	vetor[0] = Utils.bia;
 	                    	for(int x = 0; x < ((JComponent)getContentPane()).getComponentCount();x++){
 	                    		String comp = ((JComponent)getContentPane()).getComponent(x).getClass().getName();
 	                    		if(comp.equals("javax.swing.JButton") && ((JComponent)getContentPane()).getComponent(x).getHeight() == 80){
