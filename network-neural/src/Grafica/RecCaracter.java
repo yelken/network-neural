@@ -560,7 +560,7 @@ public class RecCaracter extends JFrame implements ActionListener{
 	                    		}
 	                    		
 	                    	}
-	                    	//JOptionPane.showMessageDialog(null, "Derão: " + cont + " botões para pintar.");
+	                    	
 						} catch (Exception e1) {
 							JOptionPane.showMessageDialog(null, e1.getMessage());
 						}

@@ -172,7 +172,7 @@ public class Sinapse {
 		}
 
 		System.out.println("Rede neural treinada");
-		System.out.println("Itera›es: " + iteracoes);
+		System.out.println("IteraÃ§Ãµes: " + (iteracoes -1));
 		
 		
 		
