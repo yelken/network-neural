@@ -517,22 +517,25 @@ public class RecCaracter extends JFrame implements ActionListener{
 	            new ActionListener(){
 	                public void actionPerformed(ActionEvent e){
 	                    try {
-	                    	
-	                    	vetor[0] = Utils.bia;
-	                    	for(int x = 0; x < ((JComponent)getContentPane()).getComponentCount();x++){
-	                    		String comp = ((JComponent)getContentPane()).getComponent(x).getClass().getName();
-	                    		if(comp.equals("javax.swing.JButton") && ((JComponent)getContentPane()).getComponent(x).getHeight() == 80){
-	                    			cor = ((JComponent)getContentPane()).getComponent(x).getBackground();
-	                    			if(cor == Color.black){
-	                    				vetor[cont] = 1;
-	                    			}else{
-	                    				vetor[cont] = 0;
-	                    			}
-	                    			cont++;
-	                    		}
-	                    		
+	                    	if(treinou != 0){
+		                    	vetor[0] = Utils.bia;
+		                    	for(int x = 0; x < ((JComponent)getContentPane()).getComponentCount();x++){
+		                    		String comp = ((JComponent)getContentPane()).getComponent(x).getClass().getName();
+		                    		if(comp.equals("javax.swing.JButton") && ((JComponent)getContentPane()).getComponent(x).getHeight() == 80){
+		                    			cor = ((JComponent)getContentPane()).getComponent(x).getBackground();
+		                    			if(cor == Color.black){
+		                    				vetor[cont] = 1;
+		                    			}else{
+		                    				vetor[cont] = 0;
+		                    			}
+		                    			cont++;
+		                    		}
+		                    		
+		                    	}
+	                    	}else{
+	                    		JOptionPane.showMessageDialog(null, "Não há o que validar pois a rede ainda não foi treinada!\n" + 
+	                    	    "Por favor, treine a rede primeiro!");
 	                    	}
-	                    	
 						} catch (Exception e1) {
 							JOptionPane.showMessageDialog(null, e1.getMessage());
 						}
