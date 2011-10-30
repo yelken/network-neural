@@ -51,7 +51,8 @@ public class RecCaracter extends JFrame implements ActionListener{
 	private Color cor;
 	private int cont = 1;
 	private Integer[] vetor = new Integer[21];
-		
+	private char treinou = 0;
+	
 	public RecCaracter(){
 		setTitle("RecCaracter - Programa de Reconhecimento de Caracteres - IA");
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -497,7 +498,8 @@ public class RecCaracter extends JFrame implements ActionListener{
 	            new ActionListener(){
 	                public void actionPerformed(ActionEvent e){
 	                    try {
-	                      //Chama a função interna de treinamento da rede	
+	                      treinou = 1;
+	                      
 	                    } catch (Exception e1) {
 							JOptionPane.showMessageDialog(null, e1.getMessage());
 						}
@@ -515,6 +517,7 @@ public class RecCaracter extends JFrame implements ActionListener{
 	            new ActionListener(){
 	                public void actionPerformed(ActionEvent e){
 	                    try {
+	                    	
 	                    	vetor[0] = Utils.bia;
 	                    	for(int x = 0; x < ((JComponent)getContentPane()).getComponentCount();x++){
 	                    		String comp = ((JComponent)getContentPane()).getComponent(x).getClass().getName();
