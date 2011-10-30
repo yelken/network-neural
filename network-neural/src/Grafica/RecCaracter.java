@@ -483,7 +483,7 @@ public class RecCaracter extends JFrame implements ActionListener{
 	    gbc.gridx = 5; // coluna
 	    gbc.gridwidth = 5;
 	    gbc.gridheight = 6;
-		img = new ImageIcon("F:\\FSM\\Perceptron.jpg");
+		img = new ImageIcon("Imagens/Perceptron.jpg");
 		lblPerceptronImg = new JLabel();
 		lblPerceptronImg.setIcon(img);
 		add(lblPerceptronImg, gbc);
