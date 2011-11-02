@@ -172,7 +172,7 @@ public class Sinapse {
 		}
 
 		System.out.println("Rede neural treinada");
-		System.out.println("Itera√ß√µes: " + (iteracoes -1));
+		System.out.println("Iterações: " + (iteracoes -1));
 		
 		
 		
@@ -212,5 +212,22 @@ public class Sinapse {
 		}
 
 		return resultado;
+	}
+	
+	public String resultadoPossivel(String valor) {
+		HashMap<String, String> valores = new HashMap<String, String>();
+		
+		valores.put(Utils.saidaA, "A");
+		valores.put(Utils.saidaS, "S");
+		valores.put(Utils.saidaD, "D");
+		valores.put(Utils.saidaF, "F");
+		valores.put(Utils.saidaG, "G");
+		valores.put(Utils.saidaH, "H");
+		valores.put(Utils.saidaJ, "J");
+		valores.put(Utils.saidaK, "K");
+		valores.put(Utils.saidaL, "L");
+		valores.put(Utils.saidaP, "P");
+		
+		return valores.get(valor);
 	}
 }

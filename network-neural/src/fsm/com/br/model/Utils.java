@@ -10,42 +10,52 @@ public class Utils {
 	public static final Integer[] A = { bia, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1,
 			1, 1, 0, 0, 1, 1, 0, 0, 1 };
 	public static final Integer[] sdA = { 0, 0, 0, 0 };
+	public static final String saidaA = "0000";
 
 	public static final Integer[] S = { bia, 1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1,
 			1, 0, 0, 0, 1, 1, 1, 1, 1 };
 	public static final Integer[] sdS = { 0, 0, 0, 1 };
+	public static final String saidaS = "0001";
 
 	public static final Integer[] D = { bia, 1, 1, 1, 0, 1, 0, 0, 1, 1, 0, 0,
 			1, 1, 0, 0, 1, 1, 1, 1, 0 };
 	public static final Integer[] sdD = { 0, 0, 1, 0 };
+	public static final String saidaD = "0010";
 
 	public static final Integer[] F = { bia, 1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1,
 			0, 1, 0, 0, 0, 1, 0, 0, 0 };
 	public static final Integer[] sdF = { 0, 0, 1, 1 };
+	public static final String saidaF = "0011";
 
 	public static final Integer[] G = { bia, 1, 1, 1, 1, 1, 0, 0, 0, 1, 0, 1,
 			1, 1, 0, 0, 1, 1, 1, 1, 1 };
 	public static final Integer[] sdG = { 0, 1, 0, 0 };
+	public static final String saidaG = "0100";
 
 	public static final Integer[] H = { bia, 1, 0, 0, 1, 1, 0, 0, 1, 1, 1, 1,
 			1, 1, 0, 0, 1, 1, 0, 0, 1 };
 	public static final Integer[] sdH = { 0, 1, 0, 1 };
+	public static final String saidaH = "0101";
 
 	public static final Integer[] J = { bia, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1,
 			0, 1, 0, 1, 0, 1, 1, 1, 0 };
 	public static final Integer[] sdJ = { 0, 1, 1, 0 };
+	public static final String saidaJ = "0110";
 
 	public static final Integer[] K = { bia, 1, 0, 0, 1, 1, 0, 1, 0, 1, 1, 0,
 			0, 1, 0, 1, 0, 1, 0, 0, 1 };
 	public static final Integer[] sdK = { 0, 1, 1, 1 };
+	public static final String saidaK = "0111";
 
 	public static final Integer[] L = { bia, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0,
 			0, 1, 0, 0, 0, 1, 1, 1, 1 };
 	public static final Integer[] sdL = { 1, 0, 0, 0 };
+	public static final String saidaL = "1000";
 
 	public static final Integer[] P = { bia, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1,
 			1, 1, 0, 0, 0, 1, 0, 0, 0 };
 	public static final Integer[] sdP = { 1, 0, 0, 1 };
+	public static final String saidaP = "1001";
 
 	public static Integer calcularTeta(Integer v) {
 		if (v >= 0) {

@@ -1,4 +1,4 @@
-package Grafica;
+package fsm.com.br.graphic;
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -14,7 +14,7 @@ import java.awt.Insets;
 import java.awt.Point;
 import java.awt.Toolkit;
 
-public class RecCaracter extends JFrame implements ActionListener{
+public class Gui extends JFrame implements ActionListener{
 	private static final long serialVersionUID = 1L;
 
 	private JPanel painel;
@@ -54,7 +54,7 @@ public class RecCaracter extends JFrame implements ActionListener{
 	private char treinou = 0;
 	private int desenhou = 0;
 	
-	public RecCaracter(){
+	public Gui(){
 		setTitle("RecCaracter - Programa de Reconhecimento de Caracteres - IA");
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setResizable(false);
@@ -603,7 +603,7 @@ public class RecCaracter extends JFrame implements ActionListener{
     }
 	
 	public static void main(String[] args) {
-		RecCaracter rec = new RecCaracter();
+		Gui rec = new Gui();
 		rec.centralizar();
 		rec.setVisible(true);
 
