@@ -55,7 +55,7 @@ public class Gui extends JFrame implements ActionListener{
 	private int desenhou = 0;
 	
 	public Gui(){
-		setTitle("RecCaracter - Programa de Reconhecimento de Caracteres - IA");
+		setTitle("Programa de Reconhecimento de Caracteres - IA");
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setResizable(false);
 		setLayout(new GridBagLayout());
