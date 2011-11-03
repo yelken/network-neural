@@ -232,8 +232,22 @@ public class Sinapse {
 		return (valores.get(valor) == null) ? "Letra n‹o encontrada" : valores.get(valor);
 	}
 	
-	public void validacaoRedeNeural() {
+	public void validacaoRedeNeural() throws IOException {
+		Vector<Integer[]> entradas = new Vector<Integer[]>();
 		
+		entradas.add(Utils.A);
+		entradas.add(Utils.S);
+		entradas.add(Utils.D);
+		entradas.add(Utils.F);
+		entradas.add(Utils.G);
+		entradas.add(Utils.H);
+		entradas.add(Utils.J);
+		entradas.add(Utils.K);
+		entradas.add(Utils.L);
+		entradas.add(Utils.P);
 		
+		for (Integer[] inpt : entradas) {
+			System.out.println(resultadoPossivel(calcularResultado(inpt, treinarRede())));	
+		}
 	}
 }
