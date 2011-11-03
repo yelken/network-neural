@@ -131,8 +131,8 @@ public class Utils {
 		FileWriter writer = new FileWriter(file, true);
 		PrintWriter saida = new PrintWriter(writer, true);
 		saida.println(texto);
-		System.out.println(texto);
 		saida.println("\n");
+		System.out.println(texto);
 		saida.close();
 		writer.close();
 	}

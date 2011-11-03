@@ -42,7 +42,7 @@ public class Sinapse {
 
 		Vector<Integer> resultadoIteracao = new Vector<Integer>();
 		Boolean repetir = false;
-		Integer iteracoes = 0;
+		Integer iteracoes = 1;
 
 		for (int y = 0; y < resultadosEsperados.size(); y++) {
 			Utils.writerLog("Ciclo: " + iteracoes);
@@ -173,7 +173,7 @@ public class Sinapse {
 		}
 
 		Utils.writerLog("Rede neural treinada");
-		Utils.writerLog("Itera›es: " + (iteracoes -1));
+		Utils.writerLog("Itera›es: " + (iteracoes));
 		
 		
 		

@@ -596,6 +596,7 @@ public class Gui extends JFrame implements ActionListener{
 	    gbc.gridx = 0; // coluna
 	    gbc.gridwidth = 13;
 	    jtaResult = new JTextArea(10,100);
+	    jtaResult.setLineWrap(true);
 	    jspScroll2 = new JScrollPane(jtaResult);
 	    add(jspScroll2, gbc);
 	    
