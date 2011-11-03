@@ -3,6 +3,9 @@ package fsm.com.br.graphic;
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 
@@ -10,6 +13,7 @@ import fsm.com.br.fachada.Fachada;
 import fsm.com.br.model.Neuronio;
 import fsm.com.br.model.Utils;
 
+import java.awt.Cursor;
 import java.awt.Dimension;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
@@ -18,7 +22,7 @@ import java.awt.Point;
 import java.awt.Toolkit;
 import java.util.Vector;
 
-public class Gui extends JFrame implements ActionListener{
+public class Gui extends JFrame implements ActionListener, MouseListener{
 	private static final long serialVersionUID = 1L;
 
 	private JLabel lblTexto1;
@@ -30,6 +34,8 @@ public class Gui extends JFrame implements ActionListener{
 	private JLabel lblTexto3;
 	private JTextArea jtaResult;
 	private JScrollPane jspScroll2;
+	private JLabel link;
+	private Cursor cursor;
 	
 	private JButton btn1;
 	private JButton btn2;
@@ -88,8 +94,7 @@ public class Gui extends JFrame implements ActionListener{
 	            new ActionListener(){
 	                public void actionPerformed(ActionEvent e){
 	                    try {
-	                    	//btn1.setBackground(Color.black);
-	                    	btn1.setText("1");
+	                    	btn1.setBackground(Color.black);
 	                    	desenhou += 1;
 						} catch (Exception e1) {
 							JOptionPane.showMessageDialog(null, e1.getMessage());
@@ -110,7 +115,6 @@ public class Gui extends JFrame implements ActionListener{
 	                public void actionPerformed(ActionEvent e){
 	                    try {
 	                    	btn2.setBackground(Color.black);
-	                    	btn2.setText("1");
 	                    	desenhou += 1;
 						} catch (Exception e1) {
 							JOptionPane.showMessageDialog(null, e1.getMessage());
@@ -130,8 +134,7 @@ public class Gui extends JFrame implements ActionListener{
 	            new ActionListener(){
 	                public void actionPerformed(ActionEvent e){
 	                    try {
-	                    	//btn3.setBackground(Color.black);
-	                    	btn3.setText("1");
+	                    	btn3.setBackground(Color.black);
 	                    	desenhou += 1;
 						} catch (Exception e1) {
 							JOptionPane.showMessageDialog(null, e1.getMessage());
@@ -151,8 +154,7 @@ public class Gui extends JFrame implements ActionListener{
 	            new ActionListener(){
 	                public void actionPerformed(ActionEvent e){
 	                    try {
-	                    	//btn4.setBackground(Color.black);
-	                    	btn4.setText("1");
+	                    	btn4.setBackground(Color.black);
 	                    	desenhou += 1;
 						} catch (Exception e1) {
 							JOptionPane.showMessageDialog(null, e1.getMessage());
@@ -173,7 +175,6 @@ public class Gui extends JFrame implements ActionListener{
 	                public void actionPerformed(ActionEvent e){
 	                    try {
 	                    	btn5.setBackground(Color.black); 
-	                    	btn5.setText("1");
 	                    	desenhou += 1;
 						} catch (Exception e1) {
 							JOptionPane.showMessageDialog(null, e1.getMessage());
@@ -194,7 +195,6 @@ public class Gui extends JFrame implements ActionListener{
 	                public void actionPerformed(ActionEvent e){
 	                    try {
 	                    	btn6.setBackground(Color.black); 
-	                    	btn6.setText("1");
 	                    	desenhou += 1;
 						} catch (Exception e1) {
 							JOptionPane.showMessageDialog(null, e1.getMessage());
@@ -215,7 +215,6 @@ public class Gui extends JFrame implements ActionListener{
 	                public void actionPerformed(ActionEvent e){
 	                    try {
 	                    	btn7.setBackground(Color.black); 
-	                    	btn7.setText("1");
 	                    	desenhou += 1;
 						} catch (Exception e1) {
 							JOptionPane.showMessageDialog(null, e1.getMessage());
@@ -236,7 +235,6 @@ public class Gui extends JFrame implements ActionListener{
 	                public void actionPerformed(ActionEvent e){
 	                    try {
 	                    	btn8.setBackground(Color.black); 
-	                    	btn8.setText("1");
 	                    	desenhou += 1;
 						} catch (Exception e1) {
 							JOptionPane.showMessageDialog(null, e1.getMessage());
@@ -257,7 +255,6 @@ public class Gui extends JFrame implements ActionListener{
 	                public void actionPerformed(ActionEvent e){
 	                    try {
 	                    	btn9.setBackground(Color.black);
-	                    	btn9.setText("1");
 	                    	desenhou += 1;
 						} catch (Exception e1) {
 							JOptionPane.showMessageDialog(null, e1.getMessage());
@@ -278,7 +275,6 @@ public class Gui extends JFrame implements ActionListener{
 	                public void actionPerformed(ActionEvent e){
 	                    try {
 	                    	btn10.setBackground(Color.black); 
-	                    	btn10.setText("1");
 	                    	desenhou += 1;
 						} catch (Exception e1) {
 							JOptionPane.showMessageDialog(null, e1.getMessage());
@@ -299,7 +295,6 @@ public class Gui extends JFrame implements ActionListener{
 	                public void actionPerformed(ActionEvent e){
 	                    try {
 	                    	btn11.setBackground(Color.black); 
-	                    	btn11.setText("1");
 	                    	desenhou += 1;
 						} catch (Exception e1) {
 							JOptionPane.showMessageDialog(null, e1.getMessage());
@@ -320,7 +315,6 @@ public class Gui extends JFrame implements ActionListener{
 	                public void actionPerformed(ActionEvent e){
 	                    try {
 	                    	btn12.setBackground(Color.black); 
-	                    	btn12.setText("1");
 	                    	desenhou += 1;
 						} catch (Exception e1) {
 							JOptionPane.showMessageDialog(null, e1.getMessage());
@@ -341,7 +335,6 @@ public class Gui extends JFrame implements ActionListener{
 	                public void actionPerformed(ActionEvent e){
 	                    try {
 	                    	btn13.setBackground(Color.black);
-	                    	btn13.setText("1");
 	                    	desenhou += 1;
 						} catch (Exception e1) {
 							JOptionPane.showMessageDialog(null, e1.getMessage());
@@ -362,7 +355,6 @@ public class Gui extends JFrame implements ActionListener{
 	                public void actionPerformed(ActionEvent e){
 	                    try {
 	                    	btn14.setBackground(Color.black); 
-	                    	btn14.setText("1");
 	                    	desenhou += 1;
 						} catch (Exception e1) {
 							JOptionPane.showMessageDialog(null, e1.getMessage());
@@ -383,7 +375,6 @@ public class Gui extends JFrame implements ActionListener{
 	                public void actionPerformed(ActionEvent e){
 	                    try {
 	                    	btn15.setBackground(Color.black); 
-	                    	btn15.setText("1");
 	                    	desenhou += 1;
 						} catch (Exception e1) {
 							JOptionPane.showMessageDialog(null, e1.getMessage());
@@ -404,7 +395,6 @@ public class Gui extends JFrame implements ActionListener{
 	                public void actionPerformed(ActionEvent e){
 	                    try {
 	                    	btn16.setBackground(Color.black); 
-	                    	btn16.setText("1");
 	                    	desenhou += 1;
 						} catch (Exception e1) {
 							JOptionPane.showMessageDialog(null, e1.getMessage());
@@ -425,7 +415,6 @@ public class Gui extends JFrame implements ActionListener{
 	                public void actionPerformed(ActionEvent e){
 	                    try {
 	                    	btn17.setBackground(Color.black); 
-	                    	btn17.setText("1");
 	                    	desenhou += 1;
 						} catch (Exception e1) {
 							JOptionPane.showMessageDialog(null, e1.getMessage());
@@ -446,7 +435,6 @@ public class Gui extends JFrame implements ActionListener{
 	                public void actionPerformed(ActionEvent e){
 	                    try {
 	                    	btn18.setBackground(Color.black); 
-	                    	btn18.setText("1");
 	                    	desenhou += 1;
 						} catch (Exception e1) {
 							JOptionPane.showMessageDialog(null, e1.getMessage());
@@ -467,7 +455,6 @@ public class Gui extends JFrame implements ActionListener{
 	                public void actionPerformed(ActionEvent e){
 	                    try {
 	                    	btn19.setBackground(Color.black); 
-	                    	btn19.setText("1");
 	                    	desenhou += 1;
 						} catch (Exception e1) {
 							JOptionPane.showMessageDialog(null, e1.getMessage());
@@ -488,7 +475,6 @@ public class Gui extends JFrame implements ActionListener{
 	                public void actionPerformed(ActionEvent e){
 	                    try {
 	                    	btn20.setBackground(Color.black);
-	                    	btn20.setText("1");
 	                    	desenhou += 1;
 						} catch (Exception e1) {
 							JOptionPane.showMessageDialog(null, e1.getMessage());
@@ -592,12 +578,11 @@ public class Gui extends JFrame implements ActionListener{
 	                    		String comp = ((JComponent)getContentPane()).getComponent(x).getClass().getName();
 	                    		if(comp.equals("javax.swing.JButton") && ((JComponent)getContentPane()).getComponent(x).getHeight() == 80){
 	                    			((JComponent)getContentPane()).getComponent(x).setBackground(Color.white);
-	                    			((JButton) ((JComponent)getContentPane()).getComponent(x)).setText("");
 	                    			desenhou = 0;
 	                    		}
 	                    		
 	                    	}
-	                    	
+	                    	jtaResult.setText("");
 						} catch (Exception e1) {
 							JOptionPane.showMessageDialog(null, e1.getMessage());
 						}
@@ -605,6 +590,53 @@ public class Gui extends JFrame implements ActionListener{
 	            }   
 	        ); 
 	    
+		gbc.gridy = 7; // linha
+	    gbc.gridx = 5; // coluna
+	    gbc.gridwidth = 1;
+	    gbc.gridheight = 2;
+		link = new JLabel("https://network-neural.googlecode.com/svn/trunk");
+		link.setForeground(Color.blue);  
+		add(link, gbc);
+		link.addMouseListener(
+	            new MouseListener() {
+	                public void mouseClicked(MouseEvent e){
+	                    
+	                	try {
+	                		
+	                    	
+						} catch (Exception e1) {
+							JOptionPane.showMessageDialog(null, e1.getMessage());
+						}
+	                }
+
+					@Override
+					public void mouseEntered(MouseEvent e) {
+						cursor = new Cursor(cursor.HAND_CURSOR);
+						link.setForeground(Color.red);  
+						link.setCursor(cursor);
+					}
+
+					@Override
+					public void mouseExited(MouseEvent e) {
+						link.setForeground(Color.blue);  
+						
+					}
+
+					@Override
+					public void mousePressed(MouseEvent e) {
+						// TODO Auto-generated method stub
+						
+					}
+
+					@Override
+					public void mouseReleased(MouseEvent e) {
+						// TODO Auto-generated method stub
+						
+					}
+	            }   
+	        ); 
+		
+		
 		gbc.anchor = GridBagConstraints.WEST;
 		gbc.gridy = 8; // linha
 	    gbc.gridx = 0; // coluna
@@ -618,6 +650,7 @@ public class Gui extends JFrame implements ActionListener{
 	    gbc.gridwidth = 13;
 	    jtaResult = new JTextArea(10,100);
 	    jtaResult.setLineWrap(true);
+	    jtaResult.setEditable(false);
 	    jspScroll2 = new JScrollPane(jtaResult);
 	    add(jspScroll2, gbc);
 	    
@@ -641,9 +674,40 @@ public class Gui extends JFrame implements ActionListener{
 	}
 
 	@Override
-	public void actionPerformed(ActionEvent e) {
+	public void mouseClicked(MouseEvent e) {
 		// TODO Auto-generated method stub
 		
 	}
 
+	@Override
+	public void mouseEntered(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void mouseExited(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void mousePressed(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void mouseReleased(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent arg0) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	
 }
