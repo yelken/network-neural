@@ -62,6 +62,27 @@ public class Gui extends JFrame implements ActionListener, MouseListener{
 	private JButton btn20;
 	private Color cor;
 	private int cont = 1;
+	private int contBtn1 = 0;
+	private int contBtn2 = 0;
+	private int contBtn3 = 0;
+	private int contBtn4 = 0;
+	private int contBtn5 = 0;
+	private int contBtn6 = 0;
+	private int contBtn7 = 0;
+	private int contBtn8 = 0;
+	private int contBtn9 = 0;
+	private int contBtn10 = 0;
+	private int contBtn11 = 0;
+	private int contBtn12 = 0;
+	private int contBtn13 = 0;
+	private int contBtn14 = 0;
+	private int contBtn15 = 0;
+	private int contBtn16 = 0;
+	private int contBtn17 = 0;
+	private int contBtn18 = 0;
+	private int contBtn19 = 0;
+	private int contBtn20 = 0;
+	
 	private Integer[] vetor = new Integer[21];
 	private Vector<Neuronio> resultTreinar;
 	private char treinou = 0;
@@ -96,12 +117,20 @@ public class Gui extends JFrame implements ActionListener, MouseListener{
 	    btn1.addActionListener(
 	            new ActionListener(){
 	                public void actionPerformed(ActionEvent e){
-	                    try {
-	                    	btn1.setBackground(Color.black);
+	                	try {
+	                    	if(contBtn1 == 0){
+	                    		btn1.setBackground(Color.black);
+	                    		contBtn1 = 1;
+	                    	}else{
+	                    		btn1.setBackground(Color.white);
+	                    		contBtn1 = 0;
+	                    	}
+	                    		
 	                    	desenhou += 1;
 						} catch (Exception e1) {
 							JOptionPane.showMessageDialog(null, e1.getMessage());
 						}
+	                	
 	                }
 	            }   
 	        ); 
@@ -116,8 +145,14 @@ public class Gui extends JFrame implements ActionListener, MouseListener{
 	    btn2.addActionListener(
 	            new ActionListener(){
 	                public void actionPerformed(ActionEvent e){
-	                    try {
-	                    	btn2.setBackground(Color.black);
+	                	try {
+	                    	if(contBtn2 == 0){
+	                    		btn2.setBackground(Color.black);
+	                    		contBtn2 = 1;
+	                    	}else{
+	                    		btn2.setBackground(Color.white);
+	                    		contBtn2 = 0;
+	                    	}
 	                    	desenhou += 1;
 						} catch (Exception e1) {
 							JOptionPane.showMessageDialog(null, e1.getMessage());
@@ -136,8 +171,14 @@ public class Gui extends JFrame implements ActionListener, MouseListener{
 	    btn3.addActionListener(
 	            new ActionListener(){
 	                public void actionPerformed(ActionEvent e){
-	                    try {
-	                    	btn3.setBackground(Color.black);
+	                	try {
+	                    	if(contBtn3 == 0){
+	                    		btn3.setBackground(Color.black);
+	                    		contBtn3 = 1;
+	                    	}else{
+	                    		btn3.setBackground(Color.white);
+	                    		contBtn3 = 0;
+	                    	}
 	                    	desenhou += 1;
 						} catch (Exception e1) {
 							JOptionPane.showMessageDialog(null, e1.getMessage());
@@ -156,9 +197,14 @@ public class Gui extends JFrame implements ActionListener, MouseListener{
 	    btn4.addActionListener(
 	            new ActionListener(){
 	                public void actionPerformed(ActionEvent e){
-	                    try {
-	                    	btn4.setBackground(Color.black);
-	                    	desenhou += 1;
+	                	try {
+	                    	if(contBtn4 == 0){
+	                    		btn4.setBackground(Color.black);
+	                    		contBtn4 = 1;
+	                    	}else{
+	                    		btn4.setBackground(Color.white);
+	                    		contBtn4 = 0;
+	                    	}
 						} catch (Exception e1) {
 							JOptionPane.showMessageDialog(null, e1.getMessage());
 						}
@@ -176,8 +222,14 @@ public class Gui extends JFrame implements ActionListener, MouseListener{
 	    btn5.addActionListener(
 	            new ActionListener(){
 	                public void actionPerformed(ActionEvent e){
-	                    try {
-	                    	btn5.setBackground(Color.black); 
+	                	try {
+	                    	if(contBtn5 == 0){
+	                    		btn5.setBackground(Color.black);
+	                    		contBtn5 = 1;
+	                    	}else{
+	                    		btn5.setBackground(Color.white);
+	                    		contBtn5 = 0;
+	                    	}
 	                    	desenhou += 1;
 						} catch (Exception e1) {
 							JOptionPane.showMessageDialog(null, e1.getMessage());
@@ -196,9 +248,14 @@ public class Gui extends JFrame implements ActionListener, MouseListener{
 	    btn6.addActionListener(
 	            new ActionListener(){
 	                public void actionPerformed(ActionEvent e){
-	                    try {
-	                    	btn6.setBackground(Color.black); 
-	                    	desenhou += 1;
+	                	try {
+	                    	if(contBtn6 == 0){
+	                    		btn6.setBackground(Color.black);
+	                    		contBtn6 = 1;
+	                    	}else{
+	                    		btn6.setBackground(Color.white);
+	                    		contBtn6 = 0;
+	                    	}
 						} catch (Exception e1) {
 							JOptionPane.showMessageDialog(null, e1.getMessage());
 						}
@@ -216,8 +273,14 @@ public class Gui extends JFrame implements ActionListener, MouseListener{
 	    btn7.addActionListener(
 	            new ActionListener(){
 	                public void actionPerformed(ActionEvent e){
-	                    try {
-	                    	btn7.setBackground(Color.black); 
+	                	try {
+	                    	if(contBtn7 == 0){
+	                    		btn7.setBackground(Color.black);
+	                    		contBtn7 = 1;
+	                    	}else{
+	                    		btn7.setBackground(Color.white);
+	                    		contBtn7 = 0;
+	                    	}
 	                    	desenhou += 1;
 						} catch (Exception e1) {
 							JOptionPane.showMessageDialog(null, e1.getMessage());
@@ -236,8 +299,14 @@ public class Gui extends JFrame implements ActionListener, MouseListener{
 	    btn8.addActionListener(
 	            new ActionListener(){
 	                public void actionPerformed(ActionEvent e){
-	                    try {
-	                    	btn8.setBackground(Color.black); 
+	                	try {
+	                    	if(contBtn8 == 0){
+	                    		btn8.setBackground(Color.black);
+	                    		contBtn8 = 1;
+	                    	}else{
+	                    		btn8.setBackground(Color.white);
+	                    		contBtn8 = 0;
+	                    	}
 	                    	desenhou += 1;
 						} catch (Exception e1) {
 							JOptionPane.showMessageDialog(null, e1.getMessage());
@@ -256,8 +325,14 @@ public class Gui extends JFrame implements ActionListener, MouseListener{
 	    btn9.addActionListener(
 	            new ActionListener(){
 	                public void actionPerformed(ActionEvent e){
-	                    try {
-	                    	btn9.setBackground(Color.black);
+	                	try {
+	                    	if(contBtn9 == 0){
+	                    		btn9.setBackground(Color.black);
+	                    		contBtn9 = 1;
+	                    	}else{
+	                    		btn9.setBackground(Color.white);
+	                    		contBtn9 = 0;
+	                    	}
 	                    	desenhou += 1;
 						} catch (Exception e1) {
 							JOptionPane.showMessageDialog(null, e1.getMessage());
@@ -276,8 +351,14 @@ public class Gui extends JFrame implements ActionListener, MouseListener{
 	    btn10.addActionListener(
 	            new ActionListener(){
 	                public void actionPerformed(ActionEvent e){
-	                    try {
-	                    	btn10.setBackground(Color.black); 
+	                	try {
+	                    	if(contBtn10 == 0){
+	                    		btn10.setBackground(Color.black);
+	                    		contBtn10 = 1;
+	                    	}else{
+	                    		btn10.setBackground(Color.white);
+	                    		contBtn10 = 0;
+	                    	}
 	                    	desenhou += 1;
 						} catch (Exception e1) {
 							JOptionPane.showMessageDialog(null, e1.getMessage());
@@ -296,8 +377,14 @@ public class Gui extends JFrame implements ActionListener, MouseListener{
 	    btn11.addActionListener(
 	            new ActionListener(){
 	                public void actionPerformed(ActionEvent e){
-	                    try {
-	                    	btn11.setBackground(Color.black); 
+	                	try {
+	                    	if(contBtn11 == 0){
+	                    		btn11.setBackground(Color.black);
+	                    		contBtn11 = 1;
+	                    	}else{
+	                    		btn11.setBackground(Color.white);
+	                    		contBtn11 = 0;
+	                    	}
 	                    	desenhou += 1;
 						} catch (Exception e1) {
 							JOptionPane.showMessageDialog(null, e1.getMessage());
@@ -316,8 +403,14 @@ public class Gui extends JFrame implements ActionListener, MouseListener{
 	    btn12.addActionListener(
 	            new ActionListener(){
 	                public void actionPerformed(ActionEvent e){
-	                    try {
-	                    	btn12.setBackground(Color.black); 
+	                	try {
+	                    	if(contBtn12 == 0){
+	                    		btn12.setBackground(Color.black);
+	                    		contBtn12 = 1;
+	                    	}else{
+	                    		btn12.setBackground(Color.white);
+	                    		contBtn12 = 0;
+	                    	}
 	                    	desenhou += 1;
 						} catch (Exception e1) {
 							JOptionPane.showMessageDialog(null, e1.getMessage());
@@ -336,8 +429,14 @@ public class Gui extends JFrame implements ActionListener, MouseListener{
 	    btn13.addActionListener(
 	            new ActionListener(){
 	                public void actionPerformed(ActionEvent e){
-	                    try {
-	                    	btn13.setBackground(Color.black);
+	                	try {
+	                    	if(contBtn13 == 0){
+	                    		btn13.setBackground(Color.black);
+	                    		contBtn13 = 1;
+	                    	}else{
+	                    		btn13.setBackground(Color.white);
+	                    		contBtn13 = 0;
+	                    	}
 	                    	desenhou += 1;
 						} catch (Exception e1) {
 							JOptionPane.showMessageDialog(null, e1.getMessage());
@@ -356,8 +455,14 @@ public class Gui extends JFrame implements ActionListener, MouseListener{
 	    btn14.addActionListener(
 	            new ActionListener(){
 	                public void actionPerformed(ActionEvent e){
-	                    try {
-	                    	btn14.setBackground(Color.black); 
+	                	try {
+	                    	if(contBtn14 == 0){
+	                    		btn14.setBackground(Color.black);
+	                    		contBtn14 = 1;
+	                    	}else{
+	                    		btn14.setBackground(Color.white);
+	                    		contBtn14 = 0;
+	                    	}
 	                    	desenhou += 1;
 						} catch (Exception e1) {
 							JOptionPane.showMessageDialog(null, e1.getMessage());
@@ -376,8 +481,14 @@ public class Gui extends JFrame implements ActionListener, MouseListener{
 	    btn15.addActionListener(
 	            new ActionListener(){
 	                public void actionPerformed(ActionEvent e){
-	                    try {
-	                    	btn15.setBackground(Color.black); 
+	                	try {
+	                    	if(contBtn15 == 0){
+	                    		btn15.setBackground(Color.black);
+	                    		contBtn15 = 1;
+	                    	}else{
+	                    		btn15.setBackground(Color.white);
+	                    		contBtn15 = 0;
+	                    	}
 	                    	desenhou += 1;
 						} catch (Exception e1) {
 							JOptionPane.showMessageDialog(null, e1.getMessage());
@@ -396,8 +507,14 @@ public class Gui extends JFrame implements ActionListener, MouseListener{
 	    btn16.addActionListener(
 	            new ActionListener(){
 	                public void actionPerformed(ActionEvent e){
-	                    try {
-	                    	btn16.setBackground(Color.black); 
+	                	try {
+	                    	if(contBtn16 == 0){
+	                    		btn16.setBackground(Color.black);
+	                    		contBtn16 = 1;
+	                    	}else{
+	                    		btn16.setBackground(Color.white);
+	                    		contBtn16 = 0;
+	                    	} 
 	                    	desenhou += 1;
 						} catch (Exception e1) {
 							JOptionPane.showMessageDialog(null, e1.getMessage());
@@ -416,8 +533,14 @@ public class Gui extends JFrame implements ActionListener, MouseListener{
 	    btn17.addActionListener(
 	            new ActionListener(){
 	                public void actionPerformed(ActionEvent e){
-	                    try {
-	                    	btn17.setBackground(Color.black); 
+	                	try {
+	                    	if(contBtn17 == 0){
+	                    		btn17.setBackground(Color.black);
+	                    		contBtn17 = 1;
+	                    	}else{
+	                    		btn17.setBackground(Color.white);
+	                    		contBtn17 = 0;
+	                    	}
 	                    	desenhou += 1;
 						} catch (Exception e1) {
 							JOptionPane.showMessageDialog(null, e1.getMessage());
@@ -436,8 +559,14 @@ public class Gui extends JFrame implements ActionListener, MouseListener{
 	    btn18.addActionListener(
 	            new ActionListener(){
 	                public void actionPerformed(ActionEvent e){
-	                    try {
-	                    	btn18.setBackground(Color.black); 
+	                	try {
+	                    	if(contBtn18 == 0){
+	                    		btn18.setBackground(Color.black);
+	                    		contBtn18 = 1;
+	                    	}else{
+	                    		btn18.setBackground(Color.white);
+	                    		contBtn18 = 0;
+	                    	}
 	                    	desenhou += 1;
 						} catch (Exception e1) {
 							JOptionPane.showMessageDialog(null, e1.getMessage());
@@ -456,8 +585,14 @@ public class Gui extends JFrame implements ActionListener, MouseListener{
 	    btn19.addActionListener(
 	            new ActionListener(){
 	                public void actionPerformed(ActionEvent e){
-	                    try {
-	                    	btn19.setBackground(Color.black); 
+	                	try {
+	                    	if(contBtn19 == 0){
+	                    		btn19.setBackground(Color.black);
+	                    		contBtn19 = 1;
+	                    	}else{
+	                    		btn19.setBackground(Color.white);
+	                    		contBtn19 = 0;
+	                    	}
 	                    	desenhou += 1;
 						} catch (Exception e1) {
 							JOptionPane.showMessageDialog(null, e1.getMessage());
@@ -476,8 +611,14 @@ public class Gui extends JFrame implements ActionListener, MouseListener{
 	    btn20.addActionListener(
 	            new ActionListener(){
 	                public void actionPerformed(ActionEvent e){
-	                    try {
-	                    	btn20.setBackground(Color.black);
+	                	try {
+	                    	if(contBtn20 == 0){
+	                    		btn20.setBackground(Color.black);
+	                    		contBtn20 = 1;
+	                    	}else{
+	                    		btn20.setBackground(Color.white);
+	                    		contBtn20 = 0;
+	                    	}
 	                    	desenhou += 1;
 						} catch (Exception e1) {
 							JOptionPane.showMessageDialog(null, e1.getMessage());
@@ -597,7 +738,7 @@ public class Gui extends JFrame implements ActionListener, MouseListener{
 	    gbc.gridx = 5; // coluna
 	    gbc.gridwidth = 1;
 	    gbc.gridheight = 2;
-		link = new JLabel("http://code.google.com/p/network-neural/");
+		link = new JLabel("https://network-neural.googlecode.com/svn/trunk");
 		
 		link.setForeground(Color.blue);  
 		add(link, gbc);
@@ -613,7 +754,7 @@ public class Gui extends JFrame implements ActionListener, MouseListener{
 		                            throw new IllegalStateException("No default browser set!"); 
 		                	
 		                	
-	                		url = new URI("http://code.google.com/p/network-neural/");            		
+	                		url = new URI("http://network-neural.googlecode.com/svn/trunk/network-neural/");            		
 	                    	
 						} catch (URISyntaxException e1) {
 							JOptionPane.showMessageDialog(null, e1.getMessage());
@@ -687,6 +828,7 @@ public class Gui extends JFrame implements ActionListener, MouseListener{
 		Gui rec = new Gui();
 		rec.centralizar();
 		rec.setVisible(true);
+
 	}
 
 	@Override
