@@ -592,6 +592,7 @@ public class Gui extends JFrame implements ActionListener{
 	                    		String comp = ((JComponent)getContentPane()).getComponent(x).getClass().getName();
 	                    		if(comp.equals("javax.swing.JButton") && ((JComponent)getContentPane()).getComponent(x).getHeight() == 80){
 	                    			((JComponent)getContentPane()).getComponent(x).setBackground(Color.white);
+	                    			((JButton) ((JComponent)getContentPane()).getComponent(x)).setText("");
 	                    			desenhou = 0;
 	                    		}
 	                    		
