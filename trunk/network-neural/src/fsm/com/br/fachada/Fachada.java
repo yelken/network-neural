@@ -1,5 +1,6 @@
 package fsm.com.br.fachada;
 
+import java.io.IOException;
 import java.util.Vector;
 
 import fsm.com.br.model.Neuronio;
@@ -28,12 +29,12 @@ public class Fachada {
 		init();
 	}
 
-	public Vector<Neuronio> treinarRede() {
+	public Vector<Neuronio> treinarRede() throws IOException {
 		return viewSinapse.treinarRede();
 	}
 
 	public String calcularResultado(Integer[] entrada,
-			Vector<Neuronio> neuronios) {
+			Vector<Neuronio> neuronios) throws IOException {
 		return viewSinapse.calcularResultado(entrada, neuronios);
 	}
 }

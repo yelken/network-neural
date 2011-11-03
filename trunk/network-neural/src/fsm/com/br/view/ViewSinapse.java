@@ -1,5 +1,6 @@
 package fsm.com.br.view;
 
+import java.io.IOException;
 import java.util.Vector;
 
 import fsm.com.br.controller.Sinapse;
@@ -15,12 +16,12 @@ public class ViewSinapse {
 		}
 	}
 
-	public Vector<Neuronio> treinarRede() {
+	public Vector<Neuronio> treinarRede() throws IOException {
 		return sinapse.treinarRede();
 	}
 
 	public String calcularResultado(Integer[] entrada,
-			Vector<Neuronio> neuronios) {
+			Vector<Neuronio> neuronios) throws IOException {
 		return sinapse.resultadoPossivel(sinapse.calcularResultado(entrada, neuronios));
 	}
 }

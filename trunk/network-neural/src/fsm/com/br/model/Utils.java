@@ -1,5 +1,12 @@
 package fsm.com.br.model;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+
 public class Utils {
 	public static final byte taxaAprendizagem = 1;
 
@@ -65,41 +72,40 @@ public class Utils {
 		}
 	}
 
-	public static Integer calcularErro(Neuronio neuronio) {
+	public static Integer calcularErro(Neuronio neuronio) throws IOException {
 		Integer resultado = neuronio.getSaidaDesejada()
 				- neuronio.getSaidaEncontrada();
-		System.err.println("Erro");
-		System.out.println("Erro = " + neuronio.getSaidaDesejada() + " - "
+		Utils.writerLog("Erro");
+		Utils.writerLog("Erro = " + neuronio.getSaidaDesejada() + " - "
 				+ neuronio.getSaidaEncontrada() + " => " + resultado);
 		return resultado;
 	}
 
-	public static Neuronio calcularNovosPesos(Neuronio neuronio) {
+	public static Neuronio calcularNovosPesos(Neuronio neuronio)
+			throws IOException {
 		System.out.println("Calculo dos novos pesos");
-		
+
 		Integer erro = calcularErro(neuronio);
-		
+
 		for (int i = 0; i < neuronio.getEntradas().size(); i++) {
-			
-			
+
 			Integer pesoNovo = neuronio.getPesos().get(i)
-					+ (taxaAprendizagem * erro * neuronio
-							.getEntradas().get(i));
+					+ (taxaAprendizagem * erro * neuronio.getEntradas().get(i));
 			neuronio.getPesos().set(i, pesoNovo);
-			
+
 			String expressaoNumerica = "W" + i + "n = "
-			+ neuronio.getPesos().get(i) + "+" + "(" + taxaAprendizagem
-			+ "*" + erro + "*"
-			+ neuronio.getEntradas().get(i) + ")" + " => " + pesoNovo;
-			
-			
-			System.out.println(expressaoNumerica);
+					+ neuronio.getPesos().get(i) + "+" + "(" + taxaAprendizagem
+					+ "*" + erro + "*" + neuronio.getEntradas().get(i) + ")"
+					+ " => " + pesoNovo;
+
+			Utils.writerLog(expressaoNumerica);
 		}
 
 		return neuronio;
 	}
 
-	public static Integer calcularResultado(Neuronio neuronio) {
+	public static Integer calcularResultado(Neuronio neuronio)
+			throws IOException {
 		Integer resultado = 0;
 
 		String expressaoNumerica = "";
@@ -114,10 +120,46 @@ public class Utils {
 
 		String v = "v = ";
 
-		System.out.println(v
+		Utils.writerLog(v
 				+ expressaoNumerica.substring(1, expressaoNumerica.length()));
 
 		return resultado;
 	}
 
+	public static void writerLog(String texto) throws IOException {
+		File file = new File("log.txt");
+		FileWriter writer = new FileWriter(file, true);
+		PrintWriter saida = new PrintWriter(writer, true);
+		saida.println(texto);
+		System.out.println(texto);
+		saida.println("\n");
+		saida.close();
+		writer.close();
+	}
+
+	public static void verifyFileLog() {
+		File file = new File("log.txt");
+
+		if (file.exists()) {
+			file.delete();
+		}
+	}
+
+	public static StringBuffer readLog() throws IOException {
+		StringBuffer retorno = new StringBuffer();
+		FileReader reader = new FileReader("log.txt");
+
+		BufferedReader bf = new BufferedReader(reader);
+
+		String linha = null;
+
+		while ((linha = bf.readLine()) != null) {
+			retorno.append(linha);
+		}
+
+		File file = new File("log.txt");
+		file.delete();
+
+		return retorno;
+	}
 }
