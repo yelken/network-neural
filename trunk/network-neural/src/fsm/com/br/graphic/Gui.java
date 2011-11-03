@@ -506,8 +506,7 @@ public class Gui extends JFrame implements ActionListener{
 	                	try {
 	                      treinou = 1;
 	                      resultTreinar = Fachada.obterInstancia().treinarRede();
-	                    //  jtaResult.setText(Fachada.obterInstancia().lerArquivo());
-	                      
+	                      jtaResult.setText(Fachada.obterInstancia().lerLog().toString());	                      
 	                    } catch (Exception e1) {
 							JOptionPane.showMessageDialog(null, e1.getMessage());
 						}
@@ -541,7 +540,7 @@ public class Gui extends JFrame implements ActionListener{
 			                    		}
 			                    		
 			                    	}
-			                    	//jtaResult.setText(Fachada.obterInstancia().lerArquivo());
+			                    	jtaResult.setText(Fachada.obterInstancia().lerLog().toString());
 			                    	JOptionPane.showMessageDialog(null, Fachada.obterInstancia().calcularResultado(vetor, resultTreinar));
 	                    		}else{
 	                    			JOptionPane.showMessageDialog(null, "Ainda não foi desenhado nada! \n Por favor, desenhe algum caractere" +
@@ -596,7 +595,6 @@ public class Gui extends JFrame implements ActionListener{
 	    gbc.gridx = 0; // coluna
 	    gbc.gridwidth = 13;
 	    jtaResult = new JTextArea(10,100);
-	    jtaResult.setLineWrap(true);
 	    jspScroll2 = new JScrollPane(jtaResult);
 	    add(jspScroll2, gbc);
 	    
