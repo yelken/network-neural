@@ -597,7 +597,7 @@ public class Gui extends JFrame implements ActionListener, MouseListener{
 	    gbc.gridx = 5; // coluna
 	    gbc.gridwidth = 1;
 	    gbc.gridheight = 2;
-		link = new JLabel("https://network-neural.googlecode.com/svn/trunk");
+		link = new JLabel("http://code.google.com/p/network-neural/");
 		
 		link.setForeground(Color.blue);  
 		add(link, gbc);
@@ -613,7 +613,7 @@ public class Gui extends JFrame implements ActionListener, MouseListener{
 		                            throw new IllegalStateException("No default browser set!"); 
 		                	
 		                	
-	                		url = new URI("http://network-neural.googlecode.com/svn/trunk/network-neural/");            		
+	                		url = new URI("http://code.google.com/p/network-neural/");            		
 	                    	
 						} catch (URISyntaxException e1) {
 							JOptionPane.showMessageDialog(null, e1.getMessage());
@@ -687,7 +687,6 @@ public class Gui extends JFrame implements ActionListener, MouseListener{
 		Gui rec = new Gui();
 		rec.centralizar();
 		rec.setVisible(true);
-
 	}
 
 	@Override
