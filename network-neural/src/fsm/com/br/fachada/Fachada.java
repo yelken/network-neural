@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.Vector;
 
 import fsm.com.br.model.Neuronio;
+import fsm.com.br.model.Utils;
 import fsm.com.br.view.ViewSinapse;
 
 public class Fachada {
@@ -36,5 +37,9 @@ public class Fachada {
 	public String calcularResultado(Integer[] entrada,
 			Vector<Neuronio> neuronios) throws IOException {
 		return viewSinapse.calcularResultado(entrada, neuronios);
+	}
+	
+	public StringBuffer lerLog() throws IOException {
+		return Utils.readLog();
 	}
 }
