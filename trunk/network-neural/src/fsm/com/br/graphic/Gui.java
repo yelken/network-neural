@@ -88,7 +88,8 @@ public class Gui extends JFrame implements ActionListener{
 	            new ActionListener(){
 	                public void actionPerformed(ActionEvent e){
 	                    try {
-	                    	btn1.setBackground(Color.black); 
+	                    	//btn1.setBackground(Color.black);
+	                    	btn1.setText("1");
 	                    	desenhou += 1;
 						} catch (Exception e1) {
 							JOptionPane.showMessageDialog(null, e1.getMessage());
@@ -108,7 +109,8 @@ public class Gui extends JFrame implements ActionListener{
 	            new ActionListener(){
 	                public void actionPerformed(ActionEvent e){
 	                    try {
-	                    	btn2.setBackground(Color.black); 
+	                    	btn2.setBackground(Color.black);
+	                    	btn2.setText("1");
 	                    	desenhou += 1;
 						} catch (Exception e1) {
 							JOptionPane.showMessageDialog(null, e1.getMessage());
@@ -128,7 +130,8 @@ public class Gui extends JFrame implements ActionListener{
 	            new ActionListener(){
 	                public void actionPerformed(ActionEvent e){
 	                    try {
-	                    	btn3.setBackground(Color.black); 
+	                    	//btn3.setBackground(Color.black);
+	                    	btn3.setText("1");
 	                    	desenhou += 1;
 						} catch (Exception e1) {
 							JOptionPane.showMessageDialog(null, e1.getMessage());
@@ -148,7 +151,8 @@ public class Gui extends JFrame implements ActionListener{
 	            new ActionListener(){
 	                public void actionPerformed(ActionEvent e){
 	                    try {
-	                    	btn4.setBackground(Color.black); 
+	                    	//btn4.setBackground(Color.black);
+	                    	btn4.setText("1");
 	                    	desenhou += 1;
 						} catch (Exception e1) {
 							JOptionPane.showMessageDialog(null, e1.getMessage());
@@ -169,6 +173,7 @@ public class Gui extends JFrame implements ActionListener{
 	                public void actionPerformed(ActionEvent e){
 	                    try {
 	                    	btn5.setBackground(Color.black); 
+	                    	btn5.setText("1");
 	                    	desenhou += 1;
 						} catch (Exception e1) {
 							JOptionPane.showMessageDialog(null, e1.getMessage());
@@ -189,6 +194,7 @@ public class Gui extends JFrame implements ActionListener{
 	                public void actionPerformed(ActionEvent e){
 	                    try {
 	                    	btn6.setBackground(Color.black); 
+	                    	btn6.setText("1");
 	                    	desenhou += 1;
 						} catch (Exception e1) {
 							JOptionPane.showMessageDialog(null, e1.getMessage());
@@ -209,6 +215,7 @@ public class Gui extends JFrame implements ActionListener{
 	                public void actionPerformed(ActionEvent e){
 	                    try {
 	                    	btn7.setBackground(Color.black); 
+	                    	btn7.setText("1");
 	                    	desenhou += 1;
 						} catch (Exception e1) {
 							JOptionPane.showMessageDialog(null, e1.getMessage());
@@ -229,6 +236,7 @@ public class Gui extends JFrame implements ActionListener{
 	                public void actionPerformed(ActionEvent e){
 	                    try {
 	                    	btn8.setBackground(Color.black); 
+	                    	btn8.setText("1");
 	                    	desenhou += 1;
 						} catch (Exception e1) {
 							JOptionPane.showMessageDialog(null, e1.getMessage());
@@ -248,7 +256,8 @@ public class Gui extends JFrame implements ActionListener{
 	            new ActionListener(){
 	                public void actionPerformed(ActionEvent e){
 	                    try {
-	                    	btn9.setBackground(Color.black); 
+	                    	btn9.setBackground(Color.black);
+	                    	btn9.setText("1");
 	                    	desenhou += 1;
 						} catch (Exception e1) {
 							JOptionPane.showMessageDialog(null, e1.getMessage());
@@ -269,6 +278,7 @@ public class Gui extends JFrame implements ActionListener{
 	                public void actionPerformed(ActionEvent e){
 	                    try {
 	                    	btn10.setBackground(Color.black); 
+	                    	btn10.setText("1");
 	                    	desenhou += 1;
 						} catch (Exception e1) {
 							JOptionPane.showMessageDialog(null, e1.getMessage());
@@ -289,6 +299,7 @@ public class Gui extends JFrame implements ActionListener{
 	                public void actionPerformed(ActionEvent e){
 	                    try {
 	                    	btn11.setBackground(Color.black); 
+	                    	btn11.setText("1");
 	                    	desenhou += 1;
 						} catch (Exception e1) {
 							JOptionPane.showMessageDialog(null, e1.getMessage());
@@ -309,6 +320,7 @@ public class Gui extends JFrame implements ActionListener{
 	                public void actionPerformed(ActionEvent e){
 	                    try {
 	                    	btn12.setBackground(Color.black); 
+	                    	btn12.setText("1");
 	                    	desenhou += 1;
 						} catch (Exception e1) {
 							JOptionPane.showMessageDialog(null, e1.getMessage());
@@ -328,7 +340,8 @@ public class Gui extends JFrame implements ActionListener{
 	            new ActionListener(){
 	                public void actionPerformed(ActionEvent e){
 	                    try {
-	                    	btn13.setBackground(Color.black); 
+	                    	btn13.setBackground(Color.black);
+	                    	btn13.setText("1");
 	                    	desenhou += 1;
 						} catch (Exception e1) {
 							JOptionPane.showMessageDialog(null, e1.getMessage());
@@ -349,6 +362,7 @@ public class Gui extends JFrame implements ActionListener{
 	                public void actionPerformed(ActionEvent e){
 	                    try {
 	                    	btn14.setBackground(Color.black); 
+	                    	btn14.setText("1");
 	                    	desenhou += 1;
 						} catch (Exception e1) {
 							JOptionPane.showMessageDialog(null, e1.getMessage());
@@ -369,6 +383,7 @@ public class Gui extends JFrame implements ActionListener{
 	                public void actionPerformed(ActionEvent e){
 	                    try {
 	                    	btn15.setBackground(Color.black); 
+	                    	btn15.setText("1");
 	                    	desenhou += 1;
 						} catch (Exception e1) {
 							JOptionPane.showMessageDialog(null, e1.getMessage());
@@ -389,6 +404,7 @@ public class Gui extends JFrame implements ActionListener{
 	                public void actionPerformed(ActionEvent e){
 	                    try {
 	                    	btn16.setBackground(Color.black); 
+	                    	btn16.setText("1");
 	                    	desenhou += 1;
 						} catch (Exception e1) {
 							JOptionPane.showMessageDialog(null, e1.getMessage());
@@ -409,6 +425,7 @@ public class Gui extends JFrame implements ActionListener{
 	                public void actionPerformed(ActionEvent e){
 	                    try {
 	                    	btn17.setBackground(Color.black); 
+	                    	btn17.setText("1");
 	                    	desenhou += 1;
 						} catch (Exception e1) {
 							JOptionPane.showMessageDialog(null, e1.getMessage());
@@ -429,6 +446,7 @@ public class Gui extends JFrame implements ActionListener{
 	                public void actionPerformed(ActionEvent e){
 	                    try {
 	                    	btn18.setBackground(Color.black); 
+	                    	btn18.setText("1");
 	                    	desenhou += 1;
 						} catch (Exception e1) {
 							JOptionPane.showMessageDialog(null, e1.getMessage());
@@ -449,6 +467,7 @@ public class Gui extends JFrame implements ActionListener{
 	                public void actionPerformed(ActionEvent e){
 	                    try {
 	                    	btn19.setBackground(Color.black); 
+	                    	btn19.setText("1");
 	                    	desenhou += 1;
 						} catch (Exception e1) {
 							JOptionPane.showMessageDialog(null, e1.getMessage());
@@ -468,7 +487,8 @@ public class Gui extends JFrame implements ActionListener{
 	            new ActionListener(){
 	                public void actionPerformed(ActionEvent e){
 	                    try {
-	                    	btn20.setBackground(Color.black); 
+	                    	btn20.setBackground(Color.black);
+	                    	btn20.setText("1");
 	                    	desenhou += 1;
 						} catch (Exception e1) {
 							JOptionPane.showMessageDialog(null, e1.getMessage());
@@ -540,8 +560,9 @@ public class Gui extends JFrame implements ActionListener{
 			                    		}
 			                    		
 			                    	}
-			                    	jtaResult.setText(Fachada.obterInstancia().lerLog().toString());
 			                    	JOptionPane.showMessageDialog(null, Fachada.obterInstancia().calcularResultado(vetor, resultTreinar));
+			                    	jtaResult.setText(Fachada.obterInstancia().lerLog().toString());
+			                    	cont = 1;
 	                    		}else{
 	                    			JOptionPane.showMessageDialog(null, "Ainda não foi desenhado nada! \n Por favor, desenhe algum caractere" +
 	                    					" antes de prosseguir com a validação!");
