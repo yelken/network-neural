@@ -5,7 +5,9 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
-
+import java.awt.Desktop; 
+import java.io.IOException;
+import java.net.URISyntaxException; 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 
@@ -20,6 +22,7 @@ import java.awt.GridBagLayout;
 import java.awt.Insets;
 import java.awt.Point;
 import java.awt.Toolkit;
+import java.net.URI;
 import java.util.Vector;
 
 public class Gui extends JFrame implements ActionListener, MouseListener{
@@ -36,7 +39,7 @@ public class Gui extends JFrame implements ActionListener, MouseListener{
 	private JScrollPane jspScroll2;
 	private JLabel link;
 	private Cursor cursor;
-	
+	private URI url;
 	private JButton btn1;
 	private JButton btn2;
 	private JButton btn3;
@@ -595,18 +598,32 @@ public class Gui extends JFrame implements ActionListener, MouseListener{
 	    gbc.gridwidth = 1;
 	    gbc.gridheight = 2;
 		link = new JLabel("https://network-neural.googlecode.com/svn/trunk");
+		
 		link.setForeground(Color.blue);  
 		add(link, gbc);
 		link.addMouseListener(
 	            new MouseListener() {
 	                public void mouseClicked(MouseEvent e){
-	                    
+	                	Desktop desktop = null; 
 	                	try {
-	                		
+		                	if (!Desktop.isDesktopSupported())       
+		                        throw new IllegalStateException("Desktop resources not supported!");
+		                		desktop = Desktop.getDesktop();
+		                		if (!desktop.isSupported(Desktop.Action.BROWSE))       
+		                            throw new IllegalStateException("No default browser set!"); 
+		                	
+		                	
+	                		url = new URI("http://network-neural.googlecode.com/svn/trunk/network-neural/");            		
 	                    	
-						} catch (Exception e1) {
+						} catch (URISyntaxException e1) {
 							JOptionPane.showMessageDialog(null, e1.getMessage());
 						}
+	                	
+	                	try {    
+	                        desktop.browse(url);    
+	                    } catch (IOException e1) {    
+	                        e1.printStackTrace();    
+	                    }    
 	                }
 
 					@Override
