@@ -83,8 +83,6 @@ public class Utils {
 
 	public static Neuronio calcularNovosPesos(Neuronio neuronio)
 			throws IOException {
-		System.out.println("Calculo dos novos pesos");
-
 		Integer erro = calcularErro(neuronio);
 
 		for (int i = 0; i < neuronio.getEntradas().size(); i++) {
