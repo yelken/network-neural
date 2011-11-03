@@ -46,7 +46,7 @@ public class Sinapse {
 
 		for (int y = 0; y < resultadosEsperados.size(); y++) {
 			Utils.writerLog("Ciclo: " + iteracoes);
-			
+
 			Map.Entry<Integer[], Integer[]> resultadoPossivel = resultadosEsperados
 					.get(y);
 
@@ -56,13 +56,13 @@ public class Sinapse {
 				if (i == contador) {
 					Utils.writerLog("Neuronio 0");
 					neuronio0.setSaidaDesejada(resultadoPossivel.getValue()[i]);
-					
+
 					Vector<Integer> entradas = new Vector<Integer>();
 
 					for (int x = 0; x < resultadoPossivel.getKey().length; x++) {
 						entradas.add(resultadoPossivel.getKey()[x]);
 					}
-					
+
 					neuronio0.setEntradas(entradas);
 					neuronio0.setSaidaEncontrada(Utils.calcularTeta(Utils
 							.calcularResultado(neuronio0)));
@@ -167,23 +167,20 @@ public class Sinapse {
 			Utils.writerLog("Resultado: " + resultadoIteracao.toString());
 			Utils.writerLog("\n");
 			resultadoIteracao.clear();
-			
+
 			iteracoes++;
 
 		}
 
 		Utils.writerLog("Rede neural treinada");
 		Utils.writerLog("Itera›es: " + (iteracoes));
-		
-		
-		
-		
+
 		Vector<Integer> clear = new Vector<Integer>();
 		neuronio0.setEntradas(clear);
 		neuronio1.setEntradas(clear);
 		neuronio2.setEntradas(clear);
 		neuronio3.setEntradas(clear);
-		
+
 		Vector<Neuronio> retorno = new Vector<Neuronio>();
 		retorno.add(neuronio0);
 		retorno.add(neuronio1);
@@ -214,10 +211,10 @@ public class Sinapse {
 
 		return resultado;
 	}
-	
+
 	public String resultadoPossivel(String valor) {
 		HashMap<String, String> valores = new HashMap<String, String>();
-		
+
 		valores.put(Utils.saidaA, "A");
 		valores.put(Utils.saidaS, "S");
 		valores.put(Utils.saidaD, "D");
@@ -228,26 +225,9 @@ public class Sinapse {
 		valores.put(Utils.saidaK, "K");
 		valores.put(Utils.saidaL, "L");
 		valores.put(Utils.saidaP, "P");
-		
-		return (valores.get(valor) == null) ? "Letra n‹o encontrada" : valores.get(valor);
+
+		return (valores.get(valor) == null) ? "Letra n‹o encontrada" : valores
+				.get(valor);
 	}
-	
-	public void validacaoRedeNeural() throws IOException {
-		Vector<Integer[]> entradas = new Vector<Integer[]>();
-		
-		entradas.add(Utils.A);
-		entradas.add(Utils.S);
-		entradas.add(Utils.D);
-		entradas.add(Utils.F);
-		entradas.add(Utils.G);
-		entradas.add(Utils.H);
-		entradas.add(Utils.J);
-		entradas.add(Utils.K);
-		entradas.add(Utils.L);
-		entradas.add(Utils.P);
-		
-		for (Integer[] inpt : entradas) {
-			System.out.println(resultadoPossivel(calcularResultado(inpt, treinarRede())));	
-		}
-	}
+
 }
