@@ -42,4 +42,5 @@ public class Fachada {
 	public StringBuffer lerLog() throws IOException {
 		return Utils.readLog();
 	}
+
 }
