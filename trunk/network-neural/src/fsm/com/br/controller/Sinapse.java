@@ -229,6 +229,11 @@ public class Sinapse {
 		valores.put(Utils.saidaL, "L");
 		valores.put(Utils.saidaP, "P");
 		
-		return valores.get(valor);
+		return (valores.get(valor) == null) ? "Letra n‹o encontrada" : valores.get(valor);
+	}
+	
+	public void validacaoRedeNeural() {
+		
+		
 	}
 }
