@@ -131,7 +131,6 @@ public class Utils {
 		FileWriter writer = new FileWriter(file, true);
 		PrintWriter saida = new PrintWriter(writer, true);
 		saida.println(texto);
-		saida.println("\n");
 		System.out.println(texto);
 		saida.close();
 		writer.close();
@@ -155,6 +154,7 @@ public class Utils {
 
 		while ((linha = bf.readLine()) != null) {
 			retorno.append(linha);
+			retorno.append("\n");
 		}
 
 		File file = new File("log.txt");
