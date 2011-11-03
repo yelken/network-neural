@@ -29,7 +29,6 @@ public class Test {
 		//System.out.println("\n");
 		//System.out.println(sinapse.calcularResultado(Utils.A, aux));
 		
-		Fachada.obterInstancia().treinarRede();
-		
+		Fachada.obterInstancia().treinarRede();	
 	}
 }

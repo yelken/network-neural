@@ -1,5 +1,6 @@
 package fsm.com.br.controller;
 
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
@@ -12,7 +13,7 @@ import fsm.com.br.model.Utils;
 
 public class Sinapse {
 
-	public Vector<Neuronio> treinarRede() {
+	public Vector<Neuronio> treinarRede() throws IOException {
 		HashMap<Integer[], Integer[]> hashMapLetras = new HashMap<Integer[], Integer[]>();
 
 		hashMapLetras.put(Utils.A, Utils.sdA);
@@ -44,7 +45,7 @@ public class Sinapse {
 		Integer iteracoes = 0;
 
 		for (int y = 0; y < resultadosEsperados.size(); y++) {
-			System.out.println("Ciclo: " + iteracoes);
+			Utils.writerLog("Ciclo: " + iteracoes);
 			
 			Map.Entry<Integer[], Integer[]> resultadoPossivel = resultadosEsperados
 					.get(y);
@@ -53,7 +54,7 @@ public class Sinapse {
 
 			for (int i = 0; i < resultadoPossivel.getValue().length; i++) {
 				if (i == contador) {
-					System.out.println("Neuronio 0");
+					Utils.writerLog("Neuronio 0");
 					neuronio0.setSaidaDesejada(resultadoPossivel.getValue()[i]);
 					
 					Vector<Integer> entradas = new Vector<Integer>();
@@ -75,7 +76,7 @@ public class Sinapse {
 
 			for (int i = 0; i < resultadoPossivel.getValue().length; i++) {
 				if (i == contador) {
-					System.out.println("Neuronio 1");
+					Utils.writerLog("Neuronio 1");
 					neuronio1.setSaidaDesejada(resultadoPossivel.getValue()[i]);
 					Vector<Integer> entradas = new Vector<Integer>();
 
@@ -96,7 +97,7 @@ public class Sinapse {
 
 			for (int i = 0; i < resultadoPossivel.getValue().length; i++) {
 				if (i == contador) {
-					System.out.println("Neuronio 2");
+					Utils.writerLog("Neuronio 2");
 					neuronio2.setSaidaDesejada(resultadoPossivel.getValue()[i]);
 					Vector<Integer> entradas = new Vector<Integer>();
 
@@ -117,7 +118,7 @@ public class Sinapse {
 
 			for (int i = 0; i < resultadoPossivel.getValue().length; i++) {
 				if (i == contador) {
-					System.out.println("Neuronio 3");
+					Utils.writerLog("Neuronio 3");
 					neuronio3.setSaidaDesejada(resultadoPossivel.getValue()[i]);
 					Vector<Integer> entradas = new Vector<Integer>();
 
@@ -161,18 +162,18 @@ public class Sinapse {
 				repetir = false;
 			}
 
-			System.out.println("Entrada: " + entrada.toString());
-			System.out.println("Saida desejada: " + saidaDesejada.toString());
-			System.out.println("Resultado: " + resultadoIteracao.toString());
-			System.out.println("\n");
+			Utils.writerLog("Entrada: " + entrada.toString());
+			Utils.writerLog("Saida desejada: " + saidaDesejada.toString());
+			Utils.writerLog("Resultado: " + resultadoIteracao.toString());
+			Utils.writerLog("\n");
 			resultadoIteracao.clear();
-
+			
 			iteracoes++;
 
 		}
 
-		System.out.println("Rede neural treinada");
-		System.out.println("Iterações: " + (iteracoes -1));
+		Utils.writerLog("Rede neural treinada");
+		Utils.writerLog("Iterações: " + (iteracoes -1));
 		
 		
 		
@@ -193,7 +194,7 @@ public class Sinapse {
 	}
 
 	public String calcularResultado(Integer[] entrada,
-			Vector<Neuronio> neuronios) {
+			Vector<Neuronio> neuronios) throws IOException {
 		String resultado = "";
 
 		for (int i = 0; i < neuronios.size(); i++) {
