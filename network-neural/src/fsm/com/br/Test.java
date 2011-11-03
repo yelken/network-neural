@@ -2,12 +2,14 @@ package fsm.com.br;
 
 import java.io.IOException;
 
+import fsm.com.br.controller.Sinapse;
 import fsm.com.br.fachada.Fachada;
+import fsm.com.br.model.Utils;
 
 public class Test {
 
 	public static void main(String[] args) throws IOException {
-		//Sinapse sinapse = new Sinapse();
+		Sinapse sinapse = new Sinapse();
 		
 
 		/*Vector<Neuronio> aux = sinapse.treinarRede();
@@ -29,6 +31,9 @@ public class Test {
 		//System.out.println("\n");
 		//System.out.println(sinapse.calcularResultado(Utils.A, aux));
 		
-		Fachada.obterInstancia().treinarRede();	
+		Utils.verifyFileLog();		
+		System.out.println(sinapse.resultadoPossivel(sinapse.calcularResultado(Utils.A, sinapse.treinarRede())));
+		
+		
 	}
 }
