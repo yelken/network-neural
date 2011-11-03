@@ -1,10 +1,13 @@
 package fsm.com.br.graphic;
+
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 
+import fsm.com.br.fachada.Fachada;
+import fsm.com.br.model.Neuronio;
 import fsm.com.br.model.Utils;
 
 import java.awt.Dimension;
@@ -13,11 +16,11 @@ import java.awt.GridBagLayout;
 import java.awt.Insets;
 import java.awt.Point;
 import java.awt.Toolkit;
+import java.util.Vector;
 
 public class Gui extends JFrame implements ActionListener{
 	private static final long serialVersionUID = 1L;
 
-	private JPanel painel;
 	private JLabel lblTexto1;
 	private ImageIcon img;
 	private JLabel lblTexto2;
@@ -51,6 +54,7 @@ public class Gui extends JFrame implements ActionListener{
 	private Color cor;
 	private int cont = 1;
 	private Integer[] vetor = new Integer[21];
+	private Vector<Neuronio> resultTreinar;
 	private char treinou = 0;
 	private int desenhou = 0;
 	
@@ -498,8 +502,11 @@ public class Gui extends JFrame implements ActionListener{
 		btnTreinar.addActionListener(
 	            new ActionListener(){
 	                public void actionPerformed(ActionEvent e){
-	                    try {
+	                    
+	                	try {
 	                      treinou = 1;
+	                      resultTreinar = Fachada.obterInstancia().treinarRede();
+	                    //  jtaResult.setText(Fachada.obterInstancia().lerArquivo());
 	                      
 	                    } catch (Exception e1) {
 							JOptionPane.showMessageDialog(null, e1.getMessage());
@@ -534,6 +541,8 @@ public class Gui extends JFrame implements ActionListener{
 			                    		}
 			                    		
 			                    	}
+			                    	//jtaResult.setText(Fachada.obterInstancia().lerArquivo());
+			                    	JOptionPane.showMessageDialog(null, Fachada.obterInstancia().calcularResultado(vetor, resultTreinar));
 	                    		}else{
 	                    			JOptionPane.showMessageDialog(null, "Ainda não foi desenhado nada! \n Por favor, desenhe algum caractere" +
 	                    					" antes de prosseguir com a validação!");
