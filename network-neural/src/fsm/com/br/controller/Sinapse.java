@@ -173,7 +173,7 @@ public class Sinapse {
 		}
 
 		Utils.writerLog("Rede neural treinada");
-		Utils.writerLog("Iterações: " + (iteracoes));
+		Utils.writerLog("Itera√ß√µes: " + (iteracoes));
 
 		Vector<Integer> clear = new Vector<Integer>();
 		neuronio0.setEntradas(clear);
@@ -226,7 +226,7 @@ public class Sinapse {
 		valores.put(Utils.saidaL, "L");
 		valores.put(Utils.saidaP, "P");
 
-		return (valores.get(valor) == null) ? "Letra não encontrada" : valores
+		return (valores.get(valor) == null) ? "Letra n√£o encontrada" : valores
 				.get(valor);
 	}
 
