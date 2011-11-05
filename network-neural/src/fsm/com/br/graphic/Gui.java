@@ -729,7 +729,7 @@ public class Gui extends JFrame implements ActionListener, MouseListener{
 	                    		}
 	                    		
 	                    	}
-	                    	//jtaResult.setText("");
+	                    	jtaResult.setText("");
 						} catch (Exception e1) {
 							JOptionPane.showMessageDialog(null, e1.getMessage());
 						}
