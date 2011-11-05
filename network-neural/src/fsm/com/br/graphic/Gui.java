@@ -62,26 +62,6 @@ public class Gui extends JFrame implements ActionListener, MouseListener{
 	private JButton btn20;
 	private Color cor;
 	private int cont = 1;
-	private int contBtn1 = 0;
-	private int contBtn2 = 0;
-	private int contBtn3 = 0;
-	private int contBtn4 = 0;
-	private int contBtn5 = 0;
-	private int contBtn6 = 0;
-	private int contBtn7 = 0;
-	private int contBtn8 = 0;
-	private int contBtn9 = 0;
-	private int contBtn10 = 0;
-	private int contBtn11 = 0;
-	private int contBtn12 = 0;
-	private int contBtn13 = 0;
-	private int contBtn14 = 0;
-	private int contBtn15 = 0;
-	private int contBtn16 = 0;
-	private int contBtn17 = 0;
-	private int contBtn18 = 0;
-	private int contBtn19 = 0;
-	private int contBtn20 = 0;
 	
 	private Integer[] vetor = new Integer[21];
 	private Vector<Neuronio> resultTreinar;
@@ -118,12 +98,14 @@ public class Gui extends JFrame implements ActionListener, MouseListener{
 	            new ActionListener(){
 	                public void actionPerformed(ActionEvent e){
 	                	try {
-	                    	if(contBtn1 == 0){
+	                    	if(btn1.getBackground() == Color.white){
 	                    		btn1.setBackground(Color.black);
-	                    		contBtn1 = 1;
+	                    		btn1.setOpaque(true);
+	                    		btn1.setBorderPainted(false);
+	                    		
 	                    	}else{
 	                    		btn1.setBackground(Color.white);
-	                    		contBtn1 = 0;
+	                    		btn1.setBorderPainted(true);
 	                    	}
 	                    		
 	                    	desenhou += 1;
@@ -146,12 +128,13 @@ public class Gui extends JFrame implements ActionListener, MouseListener{
 	            new ActionListener(){
 	                public void actionPerformed(ActionEvent e){
 	                	try {
-	                    	if(contBtn2 == 0){
+	                    	if(btn2.getBackground() == Color.white){
 	                    		btn2.setBackground(Color.black);
-	                    		contBtn2 = 1;
+	                    		btn2.setOpaque(true);
+	                    		btn2.setBorderPainted(false);
 	                    	}else{
 	                    		btn2.setBackground(Color.white);
-	                    		contBtn2 = 0;
+	                    		btn2.setBorderPainted(true);
 	                    	}
 	                    	desenhou += 1;
 						} catch (Exception e1) {
@@ -172,12 +155,13 @@ public class Gui extends JFrame implements ActionListener, MouseListener{
 	            new ActionListener(){
 	                public void actionPerformed(ActionEvent e){
 	                	try {
-	                    	if(contBtn3 == 0){
+	                    	if(btn3.getBackground() == Color.white){
 	                    		btn3.setBackground(Color.black);
-	                    		contBtn3 = 1;
+	                    		btn3.setOpaque(true);
+	                    		btn3.setBorderPainted(false);
 	                    	}else{
 	                    		btn3.setBackground(Color.white);
-	                    		contBtn3 = 0;
+	                    		btn3.setBorderPainted(true);
 	                    	}
 	                    	desenhou += 1;
 						} catch (Exception e1) {
@@ -198,12 +182,13 @@ public class Gui extends JFrame implements ActionListener, MouseListener{
 	            new ActionListener(){
 	                public void actionPerformed(ActionEvent e){
 	                	try {
-	                    	if(contBtn4 == 0){
+	                    	if(btn4.getBackground() == Color.white){
 	                    		btn4.setBackground(Color.black);
-	                    		contBtn4 = 1;
+	                    		btn4.setOpaque(true);
+	                    		btn4.setBorderPainted(false);
 	                    	}else{
 	                    		btn4.setBackground(Color.white);
-	                    		contBtn4 = 0;
+	                    		btn4.setBorderPainted(true);
 	                    	}
 						} catch (Exception e1) {
 							JOptionPane.showMessageDialog(null, e1.getMessage());
@@ -223,12 +208,13 @@ public class Gui extends JFrame implements ActionListener, MouseListener{
 	            new ActionListener(){
 	                public void actionPerformed(ActionEvent e){
 	                	try {
-	                    	if(contBtn5 == 0){
+	                    	if(btn5.getBackground() == Color.white){
 	                    		btn5.setBackground(Color.black);
-	                    		contBtn5 = 1;
+	                    		btn5.setOpaque(true);
+	                    		btn5.setBorderPainted(false);
 	                    	}else{
 	                    		btn5.setBackground(Color.white);
-	                    		contBtn5 = 0;
+	                    		btn5.setBorderPainted(true);
 	                    	}
 	                    	desenhou += 1;
 						} catch (Exception e1) {
@@ -249,12 +235,13 @@ public class Gui extends JFrame implements ActionListener, MouseListener{
 	            new ActionListener(){
 	                public void actionPerformed(ActionEvent e){
 	                	try {
-	                    	if(contBtn6 == 0){
+	                		if(btn6.getBackground() == Color.white){
 	                    		btn6.setBackground(Color.black);
-	                    		contBtn6 = 1;
+	                    		btn6.setOpaque(true);
+	                    		btn6.setBorderPainted(false);
 	                    	}else{
 	                    		btn6.setBackground(Color.white);
-	                    		contBtn6 = 0;
+	                    		btn6.setBorderPainted(true);
 	                    	}
 						} catch (Exception e1) {
 							JOptionPane.showMessageDialog(null, e1.getMessage());
@@ -274,12 +261,13 @@ public class Gui extends JFrame implements ActionListener, MouseListener{
 	            new ActionListener(){
 	                public void actionPerformed(ActionEvent e){
 	                	try {
-	                    	if(contBtn7 == 0){
+	                    	if(btn7.getBackground() == Color.white){
 	                    		btn7.setBackground(Color.black);
-	                    		contBtn7 = 1;
+	                    		btn7.setOpaque(true);
+	                    		btn7.setBorderPainted(false);
 	                    	}else{
 	                    		btn7.setBackground(Color.white);
-	                    		contBtn7 = 0;
+	                    		btn7.setBorderPainted(true);
 	                    	}
 	                    	desenhou += 1;
 						} catch (Exception e1) {
@@ -300,12 +288,13 @@ public class Gui extends JFrame implements ActionListener, MouseListener{
 	            new ActionListener(){
 	                public void actionPerformed(ActionEvent e){
 	                	try {
-	                    	if(contBtn8 == 0){
+	                		if(btn8.getBackground() == Color.white){
 	                    		btn8.setBackground(Color.black);
-	                    		contBtn8 = 1;
+	                    		btn8.setOpaque(true);
+	                    		btn8.setBorderPainted(false);
 	                    	}else{
 	                    		btn8.setBackground(Color.white);
-	                    		contBtn8 = 0;
+	                    		btn8.setBorderPainted(true);
 	                    	}
 	                    	desenhou += 1;
 						} catch (Exception e1) {
@@ -326,12 +315,13 @@ public class Gui extends JFrame implements ActionListener, MouseListener{
 	            new ActionListener(){
 	                public void actionPerformed(ActionEvent e){
 	                	try {
-	                    	if(contBtn9 == 0){
+	                		if(btn9.getBackground() == Color.white){
 	                    		btn9.setBackground(Color.black);
-	                    		contBtn9 = 1;
+	                    		btn9.setOpaque(true);
+	                    		btn9.setBorderPainted(false);
 	                    	}else{
 	                    		btn9.setBackground(Color.white);
-	                    		contBtn9 = 0;
+	                    		btn9.setBorderPainted(true);
 	                    	}
 	                    	desenhou += 1;
 						} catch (Exception e1) {
@@ -352,12 +342,13 @@ public class Gui extends JFrame implements ActionListener, MouseListener{
 	            new ActionListener(){
 	                public void actionPerformed(ActionEvent e){
 	                	try {
-	                    	if(contBtn10 == 0){
+	                		if(btn10.getBackground() == Color.white){
 	                    		btn10.setBackground(Color.black);
-	                    		contBtn10 = 1;
+	                    		btn10.setOpaque(true);
+	                    		btn10.setBorderPainted(false);
 	                    	}else{
 	                    		btn10.setBackground(Color.white);
-	                    		contBtn10 = 0;
+	                    		btn10.setBorderPainted(true);
 	                    	}
 	                    	desenhou += 1;
 						} catch (Exception e1) {
@@ -378,12 +369,13 @@ public class Gui extends JFrame implements ActionListener, MouseListener{
 	            new ActionListener(){
 	                public void actionPerformed(ActionEvent e){
 	                	try {
-	                    	if(contBtn11 == 0){
+	                		if(btn11.getBackground() == Color.white){
 	                    		btn11.setBackground(Color.black);
-	                    		contBtn11 = 1;
+	                    		btn11.setOpaque(true);
+	                    		btn11.setBorderPainted(false);
 	                    	}else{
 	                    		btn11.setBackground(Color.white);
-	                    		contBtn11 = 0;
+	                    		btn11.setBorderPainted(true);
 	                    	}
 	                    	desenhou += 1;
 						} catch (Exception e1) {
@@ -404,12 +396,13 @@ public class Gui extends JFrame implements ActionListener, MouseListener{
 	            new ActionListener(){
 	                public void actionPerformed(ActionEvent e){
 	                	try {
-	                    	if(contBtn12 == 0){
+	                		if(btn12.getBackground() == Color.white){
 	                    		btn12.setBackground(Color.black);
-	                    		contBtn12 = 1;
+	                    		btn12.setOpaque(true);
+	                    		btn12.setBorderPainted(false);
 	                    	}else{
 	                    		btn12.setBackground(Color.white);
-	                    		contBtn12 = 0;
+	                    		btn12.setBorderPainted(true);
 	                    	}
 	                    	desenhou += 1;
 						} catch (Exception e1) {
@@ -430,12 +423,13 @@ public class Gui extends JFrame implements ActionListener, MouseListener{
 	            new ActionListener(){
 	                public void actionPerformed(ActionEvent e){
 	                	try {
-	                    	if(contBtn13 == 0){
+	                		if(btn13.getBackground() == Color.white){
 	                    		btn13.setBackground(Color.black);
-	                    		contBtn13 = 1;
+	                    		btn13.setOpaque(true);
+	                    		btn13.setBorderPainted(false);
 	                    	}else{
 	                    		btn13.setBackground(Color.white);
-	                    		contBtn13 = 0;
+	                    		btn13.setBorderPainted(true);
 	                    	}
 	                    	desenhou += 1;
 						} catch (Exception e1) {
@@ -456,12 +450,13 @@ public class Gui extends JFrame implements ActionListener, MouseListener{
 	            new ActionListener(){
 	                public void actionPerformed(ActionEvent e){
 	                	try {
-	                    	if(contBtn14 == 0){
+	                		if(btn14.getBackground() == Color.white){
 	                    		btn14.setBackground(Color.black);
-	                    		contBtn14 = 1;
+	                    		btn14.setOpaque(true);
+	                    		btn14.setBorderPainted(false);
 	                    	}else{
 	                    		btn14.setBackground(Color.white);
-	                    		contBtn14 = 0;
+	                    		btn14.setBorderPainted(true);
 	                    	}
 	                    	desenhou += 1;
 						} catch (Exception e1) {
@@ -482,12 +477,13 @@ public class Gui extends JFrame implements ActionListener, MouseListener{
 	            new ActionListener(){
 	                public void actionPerformed(ActionEvent e){
 	                	try {
-	                    	if(contBtn15 == 0){
+	                		if(btn15.getBackground() == Color.white){
 	                    		btn15.setBackground(Color.black);
-	                    		contBtn15 = 1;
+	                    		btn15.setOpaque(true);
+	                    		btn15.setBorderPainted(false);
 	                    	}else{
 	                    		btn15.setBackground(Color.white);
-	                    		contBtn15 = 0;
+	                    		btn15.setBorderPainted(true);
 	                    	}
 	                    	desenhou += 1;
 						} catch (Exception e1) {
@@ -508,12 +504,13 @@ public class Gui extends JFrame implements ActionListener, MouseListener{
 	            new ActionListener(){
 	                public void actionPerformed(ActionEvent e){
 	                	try {
-	                    	if(contBtn16 == 0){
+	                		if(btn16.getBackground() == Color.white){
 	                    		btn16.setBackground(Color.black);
-	                    		contBtn16 = 1;
+	                    		btn16.setOpaque(true);
+	                    		btn16.setBorderPainted(false);
 	                    	}else{
 	                    		btn16.setBackground(Color.white);
-	                    		contBtn16 = 0;
+	                    		btn16.setBorderPainted(true);
 	                    	} 
 	                    	desenhou += 1;
 						} catch (Exception e1) {
@@ -534,12 +531,13 @@ public class Gui extends JFrame implements ActionListener, MouseListener{
 	            new ActionListener(){
 	                public void actionPerformed(ActionEvent e){
 	                	try {
-	                    	if(contBtn17 == 0){
+	                		if(btn17.getBackground() == Color.white){
 	                    		btn17.setBackground(Color.black);
-	                    		contBtn17 = 1;
+	                    		btn17.setOpaque(true);
+	                    		btn17.setBorderPainted(false);
 	                    	}else{
 	                    		btn17.setBackground(Color.white);
-	                    		contBtn17 = 0;
+	                    		btn17.setBorderPainted(true);
 	                    	}
 	                    	desenhou += 1;
 						} catch (Exception e1) {
@@ -560,12 +558,13 @@ public class Gui extends JFrame implements ActionListener, MouseListener{
 	            new ActionListener(){
 	                public void actionPerformed(ActionEvent e){
 	                	try {
-	                    	if(contBtn18 == 0){
+	                		if(btn18.getBackground() == Color.white){
 	                    		btn18.setBackground(Color.black);
-	                    		contBtn18 = 1;
+	                    		btn18.setOpaque(true);
+	                    		btn18.setBorderPainted(false);
 	                    	}else{
 	                    		btn18.setBackground(Color.white);
-	                    		contBtn18 = 0;
+	                    		btn18.setBorderPainted(true);
 	                    	}
 	                    	desenhou += 1;
 						} catch (Exception e1) {
@@ -586,12 +585,13 @@ public class Gui extends JFrame implements ActionListener, MouseListener{
 	            new ActionListener(){
 	                public void actionPerformed(ActionEvent e){
 	                	try {
-	                    	if(contBtn19 == 0){
+	                		if(btn19.getBackground() == Color.white){
 	                    		btn19.setBackground(Color.black);
-	                    		contBtn19 = 1;
+	                    		btn19.setOpaque(true);
+	                    		btn19.setBorderPainted(false);
 	                    	}else{
 	                    		btn19.setBackground(Color.white);
-	                    		contBtn19 = 0;
+	                    		btn19.setBorderPainted(true);
 	                    	}
 	                    	desenhou += 1;
 						} catch (Exception e1) {
@@ -612,12 +612,14 @@ public class Gui extends JFrame implements ActionListener, MouseListener{
 	            new ActionListener(){
 	                public void actionPerformed(ActionEvent e){
 	                	try {
-	                    	if(contBtn20 == 0){
+	                		if(btn20.getBackground() == Color.white){
 	                    		btn20.setBackground(Color.black);
-	                    		contBtn20 = 1;
+	                    		btn20.setOpaque(true);
+	                    		btn20.setBorderPainted(false);
+	                    		
 	                    	}else{
 	                    		btn20.setBackground(Color.white);
-	                    		contBtn20 = 0;
+	                    		btn20.setBorderPainted(true);
 	                    	}
 	                    	desenhou += 1;
 						} catch (Exception e1) {
@@ -722,11 +724,12 @@ public class Gui extends JFrame implements ActionListener, MouseListener{
 	                    		String comp = ((JComponent)getContentPane()).getComponent(x).getClass().getName();
 	                    		if(comp.equals("javax.swing.JButton") && ((JComponent)getContentPane()).getComponent(x).getHeight() == 80){
 	                    			((JComponent)getContentPane()).getComponent(x).setBackground(Color.white);
+	                    			
 	                    			desenhou = 0;
 	                    		}
 	                    		
 	                    	}
-	                    	jtaResult.setText("");
+	                    	//jtaResult.setText("");
 						} catch (Exception e1) {
 							JOptionPane.showMessageDialog(null, e1.getMessage());
 						}
@@ -807,13 +810,13 @@ public class Gui extends JFrame implements ActionListener, MouseListener{
 	    gbc.gridx = 0; // coluna
 	    gbc.gridwidth = 13;
 	    jtaResult = new JTextArea(10,100);
-	    jtaResult.setLineWrap(true);
 	    jtaResult.setEditable(false);
 	    jspScroll2 = new JScrollPane(jtaResult);
 	    add(jspScroll2, gbc);
 	    
+	    repaint();
 		pack();
-		repaint();
+		
     }
 	
 	public void centralizar(){  
