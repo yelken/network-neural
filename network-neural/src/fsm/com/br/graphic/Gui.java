@@ -751,10 +751,10 @@ public class Gui extends JFrame implements ActionListener, MouseListener{
 	                	Desktop desktop = null; 
 	                	try {
 		                	if (!Desktop.isDesktopSupported())       
-		                        throw new IllegalStateException("Desktop resources not supported!");
+		                        throw new IllegalStateException("Recursos de Desktop não suportado!");
 		                		desktop = Desktop.getDesktop();
 		                		if (!desktop.isSupported(Desktop.Action.BROWSE))       
-		                            throw new IllegalStateException("No default browser set!"); 
+		                            throw new IllegalStateException("Browser padrão não definido!"); 
 		                	
 		                	
 	                		url = new URI("http://network-neural.googlecode.com/svn/trunk/network-neural/");            		
