@@ -2,10 +2,7 @@ package fsm.com.br.controller;
 
 import java.io.IOException;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.Map;
-import java.util.Map.Entry;
-import java.util.Set;
 import java.util.Vector;
 
 import fsm.com.br.model.Neuronio;
@@ -14,9 +11,9 @@ import fsm.com.br.model.Utils;
 public class Sinapse {
 
 	public Vector<Neuronio> treinarRede() throws IOException {
-		HashMap<Integer[], Integer[]> hashMapLetras = new HashMap<Integer[], Integer[]>();
+	    //Map<Integer[], Integer[]> hashMapLetras = new HashMap<Integer[], Integer[]>();
 
-		hashMapLetras.put(Utils.A, Utils.sdA);
+		/*hashMapLetras.put(Utils.A, Utils.sdA);
 		hashMapLetras.put(Utils.S, Utils.sdS);
 		hashMapLetras.put(Utils.D, Utils.sdD);
 		hashMapLetras.put(Utils.F, Utils.sdF);
@@ -25,42 +22,64 @@ public class Sinapse {
 		hashMapLetras.put(Utils.J, Utils.sdJ);
 		hashMapLetras.put(Utils.K, Utils.sdK);
 		hashMapLetras.put(Utils.L, Utils.sdL);
-		hashMapLetras.put(Utils.P, Utils.sdP);
+		hashMapLetras.put(Utils.P, Utils.sdP); */
+		
+		Vector<Integer[]> listaEntradas = new Vector<Integer[]>();
+		
+		Vector<Integer[]> listaSaidasDesejadas = new Vector<Integer[]>();
+		
+		listaEntradas.add(Utils.A);
+		listaSaidasDesejadas.add(Utils.sdA);
+		listaEntradas.add(Utils.S);
+		listaSaidasDesejadas.add(Utils.sdS);
+		listaEntradas.add(Utils.D);
+		listaSaidasDesejadas.add(Utils.sdD);
+		listaEntradas.add(Utils.F);
+		listaSaidasDesejadas.add(Utils.sdF);
+		listaEntradas.add(Utils.G);
+		listaSaidasDesejadas.add(Utils.sdG);
+		listaEntradas.add(Utils.H);
+		listaSaidasDesejadas.add(Utils.sdH);
+		listaEntradas.add(Utils.J);
+		listaSaidasDesejadas.add(Utils.sdJ);
+		listaEntradas.add(Utils.K);
+		listaSaidasDesejadas.add(Utils.sdK);
+		listaEntradas.add(Utils.L);
+		listaSaidasDesejadas.add(Utils.sdL);
+		listaEntradas.add(Utils.P);
+		listaSaidasDesejadas.add(Utils.sdP);
 
 		Neuronio neuronio0 = new Neuronio();
 		Neuronio neuronio1 = new Neuronio();
 		Neuronio neuronio2 = new Neuronio();
 		Neuronio neuronio3 = new Neuronio();
 
-		Set<Entry<Integer[], Integer[]>> set = hashMapLetras.entrySet();
+		/*Set<Entry<Integer[], Integer[]>> set = hashMapLetras.entrySet();
 		Iterator<Entry<Integer[], Integer[]>> iterator = set.iterator();
 		Vector<Entry<Integer[], Integer[]>> resultadosEsperados = new Vector<Map.Entry<Integer[], Integer[]>>();
 
 		while (iterator.hasNext()) {
 			resultadosEsperados.add(iterator.next());
-		}
+		} */
 
 		Vector<Integer> resultadoIteracao = new Vector<Integer>();
 		Boolean repetir = false;
 		Integer iteracoes = 1;
 
-		for (int y = 0; y < resultadosEsperados.size(); y++) {
+		for (int y = 0; y < listaEntradas.size(); y++) {
 			Utils.writerLog("Ciclo: " + iteracoes);
-
-			Map.Entry<Integer[], Integer[]> resultadoPossivel = resultadosEsperados
-					.get(y);
 
 			Integer contador = 0;
 
-			for (int i = 0; i < resultadoPossivel.getValue().length; i++) {
+			for (int i = 0; i < listaSaidasDesejadas.get(y).length; i++) {
 				if (i == contador) {
 					Utils.writerLog("Neuronio 0");
-					neuronio0.setSaidaDesejada(resultadoPossivel.getValue()[i]);
+					neuronio0.setSaidaDesejada(listaSaidasDesejadas.get(y)[i]);
 
 					Vector<Integer> entradas = new Vector<Integer>();
 
-					for (int x = 0; x < resultadoPossivel.getKey().length; x++) {
-						entradas.add(resultadoPossivel.getKey()[x]);
+					for (int x = 0; x < listaEntradas.get(y).length; x++) {
+						entradas.add(listaEntradas.get(y)[x]);
 					}
 
 					neuronio0.setEntradas(entradas);
@@ -74,14 +93,14 @@ public class Sinapse {
 				}
 			}
 
-			for (int i = 0; i < resultadoPossivel.getValue().length; i++) {
+			for (int i = 0; i < listaSaidasDesejadas.get(y).length; i++) {
 				if (i == contador) {
 					Utils.writerLog("Neuronio 1");
-					neuronio1.setSaidaDesejada(resultadoPossivel.getValue()[i]);
+					neuronio1.setSaidaDesejada(listaSaidasDesejadas.get(y)[i]);
 					Vector<Integer> entradas = new Vector<Integer>();
 
-					for (int x = 0; x < resultadoPossivel.getKey().length; x++) {
-						entradas.add(resultadoPossivel.getKey()[x]);
+					for (int x = 0; x < listaEntradas.get(y).length; x++) {
+						entradas.add(listaEntradas.get(y)[x]);
 					}
 
 					neuronio1.setEntradas(entradas);
@@ -95,14 +114,14 @@ public class Sinapse {
 				}
 			}
 
-			for (int i = 0; i < resultadoPossivel.getValue().length; i++) {
+			for (int i = 0; i < listaSaidasDesejadas.get(y).length; i++) {
 				if (i == contador) {
 					Utils.writerLog("Neuronio 2");
-					neuronio2.setSaidaDesejada(resultadoPossivel.getValue()[i]);
+					neuronio2.setSaidaDesejada(listaSaidasDesejadas.get(y)[i]);
 					Vector<Integer> entradas = new Vector<Integer>();
 
-					for (int x = 0; x < resultadoPossivel.getKey().length; x++) {
-						entradas.add(resultadoPossivel.getKey()[x]);
+					for (int x = 0; x < listaEntradas.get(y).length; x++) {
+						entradas.add(listaEntradas.get(y)[x]);
 					}
 
 					neuronio2.setEntradas(entradas);
@@ -116,14 +135,14 @@ public class Sinapse {
 				}
 			}
 
-			for (int i = 0; i < resultadoPossivel.getValue().length; i++) {
+			for (int i = 0; i < listaSaidasDesejadas.get(y).length; i++) {
 				if (i == contador) {
 					Utils.writerLog("Neuronio 3");
-					neuronio3.setSaidaDesejada(resultadoPossivel.getValue()[i]);
+					neuronio3.setSaidaDesejada(listaSaidasDesejadas.get(y)[i]);
 					Vector<Integer> entradas = new Vector<Integer>();
 
-					for (int x = 0; x < resultadoPossivel.getKey().length; x++) {
-						entradas.add(resultadoPossivel.getKey()[x]);
+					for (int x = 0; x < listaEntradas.get(y).length; x++) {
+						entradas.add(listaEntradas.get(y)[x]);
 					}
 
 					neuronio3.setEntradas(entradas);
@@ -139,14 +158,14 @@ public class Sinapse {
 
 			Vector<Integer> saidaDesejada = new Vector<Integer>();
 
-			for (int i = 0; i < resultadoPossivel.getValue().length; i++) {
-				saidaDesejada.add(resultadoPossivel.getValue()[i]);
+			for (int i = 0; i < listaSaidasDesejadas.get(y).length; i++) {
+				saidaDesejada.add(listaSaidasDesejadas.get(y)[i]);
 			}
 
 			Vector<Integer> entrada = new Vector<Integer>();
 
-			for (int i = 0; i < resultadoPossivel.getKey().length; i++) {
-				entrada.add(resultadoPossivel.getKey()[i]);
+			for (int i = 0; i < listaEntradas.get(y).length; i++) {
+				entrada.add(listaEntradas.get(y)[i]);
 			}
 
 			if (!saidaDesejada.toString().equals(resultadoIteracao.toString())) {
@@ -157,7 +176,7 @@ public class Sinapse {
 				repetir = true;
 			}
 
-			if (repetir && (y + 1 == resultadosEsperados.size())) {
+			if (repetir && (y + 1 == listaEntradas.size())) {
 				y = 0;
 				repetir = false;
 			}
@@ -213,7 +232,7 @@ public class Sinapse {
 	}
 
 	public String resultadoPossivel(String valor) {
-		HashMap<String, String> valores = new HashMap<String, String>();
+		Map<String, String> valores = new  HashMap<String, String>();
 
 		valores.put(Utils.saidaA, "A");
 		valores.put(Utils.saidaS, "S");
