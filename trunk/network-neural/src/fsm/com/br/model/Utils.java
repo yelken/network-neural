@@ -75,9 +75,11 @@ public class Utils {
 	public static Integer calcularErro(Neuronio neuronio) throws IOException {
 		Integer resultado = neuronio.getSaidaDesejada()
 				- neuronio.getSaidaEncontrada();
-		Utils.writerLog("Erro");
-		Utils.writerLog("Erro = " + neuronio.getSaidaDesejada() + " - "
+		if(resultado != 0){
+			Utils.writerLog("Erro");
+			Utils.writerLog("Erro = " + neuronio.getSaidaDesejada() + " - "
 				+ neuronio.getSaidaEncontrada() + " => " + resultado);
+		}
 		return resultado;
 	}
 
@@ -85,20 +87,21 @@ public class Utils {
 			throws IOException {
 		Integer erro = calcularErro(neuronio);
 
-		for (int i = 0; i < neuronio.getEntradas().size(); i++) {
-
-			Integer pesoNovo = neuronio.getPesos().get(i)
-					+ (taxaAprendizagem * erro * neuronio.getEntradas().get(i));
-			neuronio.getPesos().set(i, pesoNovo);
-
-			String expressaoNumerica = "W" + i + "n = "
-					+ neuronio.getPesos().get(i) + "+" + "(" + taxaAprendizagem
-					+ "*" + erro + "*" + neuronio.getEntradas().get(i) + ")"
-					+ " => " + pesoNovo;
-
-			Utils.writerLog(expressaoNumerica);
+		if(erro != 0){
+			for (int i = 0; i < neuronio.getEntradas().size(); i++) {
+	
+				Integer pesoNovo = neuronio.getPesos().get(i)
+						+ (taxaAprendizagem * erro * neuronio.getEntradas().get(i));
+				neuronio.getPesos().set(i, pesoNovo);
+	
+				String expressaoNumerica = "W" + i + "n = "
+						+ neuronio.getPesos().get(i) + "+" + "(" + taxaAprendizagem
+						+ "*" + erro + "*" + neuronio.getEntradas().get(i) + ")"
+						+ " => " + pesoNovo;
+	
+				Utils.writerLog(expressaoNumerica);
+			}
 		}
-
 		return neuronio;
 	}
 
