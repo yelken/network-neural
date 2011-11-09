@@ -7,6 +7,8 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import javax.swing.JOptionPane;
+
 public class Utils {
 	public static final byte taxaAprendizagem = 1;
 
@@ -89,16 +91,17 @@ public class Utils {
 
 		if(erro != 0){
 			for (int i = 0; i < neuronio.getEntradas().size(); i++) {
-	
-				Integer pesoNovo = neuronio.getPesos().get(i)
-						+ (taxaAprendizagem * erro * neuronio.getEntradas().get(i));
-				neuronio.getPesos().set(i, pesoNovo);
+				//JOptionPane.showMessageDialog(null, neuronio.getPesos().get(i));
+				//JOptionPane.showMessageDialog(null, neuronio.getEntradas().get(i));
+				//System.out.println(neuronio.getPesos().get(i));
+				Integer pesoNovo = neuronio.getPesos().get(i) + (taxaAprendizagem * erro * neuronio.getEntradas().get(i));
+				//neuronio.getPesos().set(i, pesoNovo);
 	
 				String expressaoNumerica = "W" + i + "n = "
 						+ neuronio.getPesos().get(i) + "+" + "(" + taxaAprendizagem
 						+ "*" + erro + "*" + neuronio.getEntradas().get(i) + ")"
 						+ " => " + pesoNovo;
-	
+				neuronio.getPesos().set(i, pesoNovo);
 				Utils.writerLog(expressaoNumerica);
 			}
 		}
