@@ -11,62 +11,53 @@ import fsm.com.br.model.Utils;
 public class Sinapse {
 
 	public Vector<Neuronio> treinarRede() throws IOException {
-	    //Map<Integer[], Integer[]> hashMapLetras = new HashMap<Integer[], Integer[]>();
-
-		/*hashMapLetras.put(Utils.A, Utils.sdA);
-		hashMapLetras.put(Utils.S, Utils.sdS);
-		hashMapLetras.put(Utils.D, Utils.sdD);
-		hashMapLetras.put(Utils.F, Utils.sdF);
-		hashMapLetras.put(Utils.G, Utils.sdG);
-		hashMapLetras.put(Utils.H, Utils.sdH);
-		hashMapLetras.put(Utils.J, Utils.sdJ);
-		hashMapLetras.put(Utils.K, Utils.sdK);
-		hashMapLetras.put(Utils.L, Utils.sdL);
-		hashMapLetras.put(Utils.P, Utils.sdP); */
-		
 		Vector<Integer[]> listaEntradas = new Vector<Integer[]>();
-		
 		Vector<Integer[]> listaSaidasDesejadas = new Vector<Integer[]>();
+		Vector<String> listaLetras = new Vector<String>();
 		
 		listaEntradas.add(Utils.A);
 		listaSaidasDesejadas.add(Utils.sdA);
+		listaLetras.add("A");
 		listaEntradas.add(Utils.S);
 		listaSaidasDesejadas.add(Utils.sdS);
+		listaLetras.add("S");
 		listaEntradas.add(Utils.D);
 		listaSaidasDesejadas.add(Utils.sdD);
+		listaLetras.add("D");
 		listaEntradas.add(Utils.F);
 		listaSaidasDesejadas.add(Utils.sdF);
+		listaLetras.add("F");
 		listaEntradas.add(Utils.G);
 		listaSaidasDesejadas.add(Utils.sdG);
+		listaLetras.add("G");
 		listaEntradas.add(Utils.H);
 		listaSaidasDesejadas.add(Utils.sdH);
+		listaLetras.add("H");
 		listaEntradas.add(Utils.J);
 		listaSaidasDesejadas.add(Utils.sdJ);
+		listaLetras.add("J");
 		listaEntradas.add(Utils.K);
 		listaSaidasDesejadas.add(Utils.sdK);
+		listaLetras.add("K");
 		listaEntradas.add(Utils.L);
 		listaSaidasDesejadas.add(Utils.sdL);
+		listaLetras.add("L");
 		listaEntradas.add(Utils.P);
 		listaSaidasDesejadas.add(Utils.sdP);
+		listaLetras.add("P");
 
 		Neuronio neuronio0 = new Neuronio();
 		Neuronio neuronio1 = new Neuronio();
 		Neuronio neuronio2 = new Neuronio();
 		Neuronio neuronio3 = new Neuronio();
 
-		/*Set<Entry<Integer[], Integer[]>> set = hashMapLetras.entrySet();
-		Iterator<Entry<Integer[], Integer[]>> iterator = set.iterator();
-		Vector<Entry<Integer[], Integer[]>> resultadosEsperados = new Vector<Map.Entry<Integer[], Integer[]>>();
-
-		while (iterator.hasNext()) {
-			resultadosEsperados.add(iterator.next());
-		} */
 
 		Vector<Integer> resultadoIteracao = new Vector<Integer>();
 		Boolean repetir = false;
 		Integer iteracoes = 1;
 
 		for (int y = 0; y < listaEntradas.size(); y++) {
+			Utils.writerLog("Letra: " + listaLetras.get(y));
 			Utils.writerLog("Ciclo: " + iteracoes);
 
 			Integer contador = 0;
@@ -107,7 +98,7 @@ public class Sinapse {
 					neuronio1.setSaidaEncontrada(Utils.calcularTeta(Utils
 							.calcularResultado(neuronio1)));
 
-					resultadoIteracao.add(neuronio1.getSaidaEncontrada());
+					resultadoIteracao.add(neuronio1.getSaidaEncontrada());      
 
 					contador++;
 					break;
@@ -177,7 +168,7 @@ public class Sinapse {
 			}
 
 			if (repetir && (y + 1 == listaEntradas.size())) {
-				y = 0;
+				y = -1;
 				repetir = false;
 			}
 
