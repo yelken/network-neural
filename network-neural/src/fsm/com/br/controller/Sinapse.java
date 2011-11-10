@@ -46,6 +46,26 @@ public class Sinapse {
 		listaSaidasDesejadas.add(Utils.sdP);
 		listaLetras.add("P");
 
+		listaEntradas.add(Utils.E);
+		listaSaidasDesejadas.add(Utils.sdE);
+		listaLetras.add("E");
+		listaEntradas.add(Utils.O);
+		listaSaidasDesejadas.add(Utils.sdO);
+		listaLetras.add("O");
+		listaEntradas.add(Utils.C);
+		listaSaidasDesejadas.add(Utils.sdC);
+		listaLetras.add("C");
+		listaEntradas.add(Utils.U);
+		listaSaidasDesejadas.add(Utils.sdU);
+		listaLetras.add("U");
+		listaEntradas.add(Utils.n2);
+		listaSaidasDesejadas.add(Utils.sd2);
+		listaLetras.add("2");
+		listaEntradas.add(Utils.n3);
+		listaSaidasDesejadas.add(Utils.sd3);
+		listaLetras.add("3");
+
+
 		Neuronio neuronio0 = new Neuronio();
 		Neuronio neuronio1 = new Neuronio();
 		Neuronio neuronio2 = new Neuronio();
@@ -243,6 +263,12 @@ public class Sinapse {
 		valores.put(Utils.saidaK, "K");
 		valores.put(Utils.saidaL, "L");
 		valores.put(Utils.saidaP, "P");
+		valores.put(Utils.saidaE, "E");
+		valores.put(Utils.saidaO, "O");
+		valores.put(Utils.saidaC, "C");
+		valores.put(Utils.saidaU, "U");
+		valores.put(Utils.saida2, "2");
+		valores.put(Utils.saida3, "3");
 
 		return (valores.get(valor) == null) ? "Letra não encontrada" : valores
 				.get(valor);
