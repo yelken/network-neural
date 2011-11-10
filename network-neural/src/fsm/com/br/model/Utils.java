@@ -99,14 +99,14 @@ public class Utils {
 						* neuronio.getEntradas().get(i);
 				Integer pesoNovo = parteExpressaoUm + (parteExpressao);
 
-				neuronio.getPesos().set(i, pesoNovo);
+				
 
 				String expressaoNumerica = "W" + i + "n = "
 						+ neuronio.getPesos().get(i) + "+" + "("
 						+ taxaAprendizagem + "*" + erro + "*"
 						+ neuronio.getEntradas().get(i) + ")" + " => "
 						+ pesoNovo;
-
+				neuronio.getPesos().set(i, pesoNovo);
 				Utils.writerLog(expressaoNumerica);
 			}
 		}
