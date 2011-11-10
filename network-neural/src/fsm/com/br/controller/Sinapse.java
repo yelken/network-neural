@@ -196,6 +196,14 @@ public class Sinapse {
 		retorno.add(neuronio1);
 		retorno.add(neuronio2);
 		retorno.add(neuronio3);
+		Utils.writerLog("-----------Pesos Finais------------");		
+		for (int x = 0; x < 21;x++){
+			Utils.writerLog("Neurônio0: Peso " + x + ": " + neuronio0.getPesos().get(x).toString());
+			Utils.writerLog("Neurônio1: Peso " + x + ": " + neuronio1.getPesos().get(x).toString());
+			Utils.writerLog("Neurônio2: Peso " + x + ": " + neuronio2.getPesos().get(x).toString());
+			Utils.writerLog("Neurônio3: Peso " + x + ": " + neuronio3.getPesos().get(x).toString());
+			Utils.writerLog("-------------------------------------------");
+		}
 
 		return retorno;
 	}
