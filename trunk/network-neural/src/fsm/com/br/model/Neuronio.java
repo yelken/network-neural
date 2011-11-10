@@ -7,6 +7,15 @@ public class Neuronio {
 	private Vector<Integer> pesos;
 	private Integer saidaDesejada;
 	private Integer saidaEncontrada;
+	private Integer posicao;
+
+	public Integer getPosicao() {
+		return posicao;
+	}
+
+	public void setPosicao(Integer posicao) {
+		this.posicao = posicao;
+	}
 
 	public Neuronio() {
 		this.pesos = new Vector<Integer>();
