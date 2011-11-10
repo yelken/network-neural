@@ -45,7 +45,6 @@ public class Sinapse {
 		listaEntradas.add(Utils.P);
 		listaSaidasDesejadas.add(Utils.sdP);
 		listaLetras.add("P");
-
 		listaEntradas.add(Utils.E);
 		listaSaidasDesejadas.add(Utils.sdE);
 		listaLetras.add("E");
@@ -65,25 +64,22 @@ public class Sinapse {
 		listaSaidasDesejadas.add(Utils.sd3);
 		listaLetras.add("3");
 
-
 		Neuronio neuronio0 = new Neuronio();
 		Neuronio neuronio1 = new Neuronio();
 		Neuronio neuronio2 = new Neuronio();
 		Neuronio neuronio3 = new Neuronio();
 
-
 		Vector<Integer> resultadoIteracao = new Vector<Integer>();
 		Boolean repetir = false;
 		Integer iteracoes = 1;
+
 
 		for (int y = 0; y < listaEntradas.size(); y++) {
 			Utils.writerLog("Letra: " + listaLetras.get(y));
 			Utils.writerLog("Ciclo: " + iteracoes);
 
-			Integer contador = 0;
-
 			for (int i = 0; i < listaSaidasDesejadas.get(y).length; i++) {
-				if (i == contador) {
+				if (i == 0) {
 					Utils.writerLog("Neuronio 0");
 					neuronio0.setSaidaDesejada(listaSaidasDesejadas.get(y)[i]);
 
@@ -99,13 +95,9 @@ public class Sinapse {
 
 					resultadoIteracao.add(neuronio0.getSaidaEncontrada());
 
-					contador++;
-					break;
 				}
-			}
-
-			for (int i = 0; i < listaSaidasDesejadas.get(y).length; i++) {
-				if (i == contador) {
+				
+				if (i == 1) {
 					Utils.writerLog("Neuronio 1");
 					neuronio1.setSaidaDesejada(listaSaidasDesejadas.get(y)[i]);
 					Vector<Integer> entradas = new Vector<Integer>();
@@ -118,15 +110,11 @@ public class Sinapse {
 					neuronio1.setSaidaEncontrada(Utils.calcularTeta(Utils
 							.calcularResultado(neuronio1)));
 
-					resultadoIteracao.add(neuronio1.getSaidaEncontrada());      
+					resultadoIteracao.add(neuronio1.getSaidaEncontrada());
 
-					contador++;
-					break;
 				}
-			}
-
-			for (int i = 0; i < listaSaidasDesejadas.get(y).length; i++) {
-				if (i == contador) {
+				
+				if (i == 2) {
 					Utils.writerLog("Neuronio 2");
 					neuronio2.setSaidaDesejada(listaSaidasDesejadas.get(y)[i]);
 					Vector<Integer> entradas = new Vector<Integer>();
@@ -141,13 +129,9 @@ public class Sinapse {
 
 					resultadoIteracao.add(neuronio2.getSaidaEncontrada());
 
-					contador++;
-					break;
 				}
-			}
-
-			for (int i = 0; i < listaSaidasDesejadas.get(y).length; i++) {
-				if (i == contador) {
+				
+				if (i == 3) {
 					Utils.writerLog("Neuronio 3");
 					neuronio3.setSaidaDesejada(listaSaidasDesejadas.get(y)[i]);
 					Vector<Integer> entradas = new Vector<Integer>();
@@ -161,11 +145,9 @@ public class Sinapse {
 							.calcularResultado(neuronio3)));
 
 					resultadoIteracao.add(neuronio3.getSaidaEncontrada());
-
-					contador++;
-					break;
 				}
 			}
+
 
 			Vector<Integer> saidaDesejada = new Vector<Integer>();
 
@@ -203,7 +185,7 @@ public class Sinapse {
 		}
 
 		Utils.writerLog("Rede neural treinada");
-		Utils.writerLog("Itera莽玫es: " + (iteracoes));
+		Utils.writerLog("Itera崨es: " + (iteracoes - 1));
 
 		Vector<Integer> clear = new Vector<Integer>();
 		neuronio0.setEntradas(clear);
@@ -216,12 +198,13 @@ public class Sinapse {
 		retorno.add(neuronio1);
 		retorno.add(neuronio2);
 		retorno.add(neuronio3);
+		
 		Utils.writerLog("-----------Pesos Finais------------");		
 		for (int x = 0; x < 21;x++){
-			Utils.writerLog("Neur么nio0: Peso " + x + ": " + neuronio0.getPesos().get(x).toString());
-			Utils.writerLog("Neur么nio1: Peso " + x + ": " + neuronio1.getPesos().get(x).toString());
-			Utils.writerLog("Neur么nio2: Peso " + x + ": " + neuronio2.getPesos().get(x).toString());
-			Utils.writerLog("Neur么nio3: Peso " + x + ": " + neuronio3.getPesos().get(x).toString());
+			Utils.writerLog("Neuronio0: Peso " + x + ": " + neuronio0.getPesos().get(x).toString());
+			Utils.writerLog("Neuronio1: Peso " + x + ": " + neuronio1.getPesos().get(x).toString());
+			Utils.writerLog("Neuronio2: Peso " + x + ": " + neuronio2.getPesos().get(x).toString());
+			Utils.writerLog("Neuronio3: Peso " + x + ": " + neuronio3.getPesos().get(x).toString());
 			Utils.writerLog("-------------------------------------------");
 		}
 
@@ -270,7 +253,7 @@ public class Sinapse {
 		valores.put(Utils.saida2, "2");
 		valores.put(Utils.saida3, "3");
 
-		return (valores.get(valor) == null) ? "Letra n茫o encontrada" : valores
+		return (valores.get(valor) == null) ? "Letra nao encontrada" : valores
 				.get(valor);
 	}
 
