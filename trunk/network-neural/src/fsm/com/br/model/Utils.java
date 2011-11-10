@@ -124,8 +124,6 @@ public class Utils {
 						* neuronio.getEntradas().get(i);
 				Integer pesoNovo = parteExpressaoUm + (parteExpressao);
 
-				
-
 				String expressaoNumerica = "W" + i + "n = "
 						+ neuronio.getPesos().get(i) + "+" + "("
 						+ taxaAprendizagem + "*" + erro + "*"
@@ -145,12 +143,18 @@ public class Utils {
 		String expressaoNumerica = "";
 
 		for (int i = 0; i < neuronio.getEntradas().size(); i++) {
+			
+			
 			resultado = (neuronio.getPesos().get(i) * neuronio.getEntradas()
 					.get(i)) + resultado;
+			
+			
 			expressaoNumerica = expressaoNumerica + "+" + "("
 					+ neuronio.getPesos().get(i) + "*"
 					+ neuronio.getEntradas().get(i) + ")";
 		}
+		
+		expressaoNumerica = expressaoNumerica + "=>" + resultado;
 
 		String v = "v = ";
 
